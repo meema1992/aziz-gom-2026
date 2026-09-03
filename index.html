@@ -1,26 +1,743 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>كأس عزيز قوم 2026</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
 <style>
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#080808;color:#f5f1e8;font-family:Cairo,sans-serif;line-height:1.9}a{color:inherit;text-decoration:none}.nav{position:fixed;top:0;z-index:10;width:100%;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;background:rgba(8,8,8,.82);backdrop-filter:blur(14px);border-bottom:1px solid #242019}.brand{font-weight:800;letter-spacing:.5px}.brand span{color:#c9a96a}.links{display:flex;gap:20px;font-size:13px;color:#bdb7ab}.links a:hover{color:#c9a96a}.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:120px 7% 70px;background:radial-gradient(circle at 50% 35%,#241e13 0,#0b0b0b 38%,#080808 72%)}.eyebrow{color:#c9a96a;letter-spacing:4px;font-size:13px}.hero h1{font-family:'Playfair Display',serif;font-size:clamp(50px,9vw,110px);line-height:1.05;margin:18px 0}.hero p{font-size:20px;color:#c8c2b6;margin:0 auto 30px;max-width:650px}.btn{display:inline-block;padding:12px 25px;border:1px solid #c9a96a;border-radius:30px;color:#e5cf9e}.section{padding:100px 7%;max-width:1250px;margin:auto}.kicker{color:#c9a96a;font-size:13px;letter-spacing:2px}.section h2{font-family:'Playfair Display',serif;font-size:42px;margin:8px 0 18px}.lead{max-width:780px;color:#bbb5aa;font-size:18px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:35px}.card{background:#101010;border:1px solid #26231e;border-radius:18px;padding:24px;min-height:150px}.card strong{font-size:24px;color:#c9a96a;display:block;margin-bottom:5px}.timeline{border-right:1px solid #3b3325;margin-top:35px}.step{position:relative;padding:0 30px 35px}.step:before{content:'';position:absolute;right:-6px;top:9px;width:11px;height:11px;border-radius:50%;background:#c9a96a}.step h3{margin:0 0 4px}.muted{color:#9f998e}.teams{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-top:30px}.team{padding:17px 10px;text-align:center;border:1px solid #24211c;border-radius:12px;background:#0d0d0d;color:#ddd7cc}.num{color:#c9a96a;font-size:12px}.committee{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:30px}.role{padding:25px;border-top:1px solid #c9a96a;background:#101010;border-radius:16px}.sponsor{text-align:center;border:1px solid #3b3121;border-radius:24px;padding:55px 25px;background:linear-gradient(145deg,#15120d,#0c0c0c)}.sponsor .name{font-size:52px;font-weight:800;color:#c9a96a}.matches{overflow:auto;margin-top:30px}.matches table{width:100%;border-collapse:collapse;min-width:600px}.matches th,.matches td{padding:15px;border-bottom:1px solid #27231e;text-align:right}.matches th{color:#c9a96a}.closing{text-align:center;padding:130px 7%;background:radial-gradient(circle at center,#211a10,#080808 55%)}footer{text-align:center;padding:30px;color:#777;border-top:1px solid #201e1a;font-size:12px}@media(max-width:750px){.links{display:none}.section{padding:75px 6%}.section h2{font-size:34px}.hero h1{font-size:55px}}
-</style></head>
+*{
+  box-sizing:border-box
+}
+
+html{
+  scroll-behavior:smooth
+}
+
+body{
+  margin:0;
+  background:#080808;
+  color:#f5f1e8;
+  font-family:Cairo,sans-serif;
+  line-height:1.9
+}
+
+a{
+  color:inherit;
+  text-decoration:none
+}
+
+/* الشريط العلوي */
+.nav{
+  position:fixed;
+  top:0;
+  z-index:10;
+  width:100%;
+  padding:16px 5%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(8,8,8,.82);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid #242019
+}
+
+.brand{
+  font-weight:800;
+  letter-spacing:.5px
+}
+
+.brand span{
+  color:#c9a96a
+}
+
+.links{
+  display:flex;
+  gap:20px;
+  font-size:13px;
+  color:#bdb7ab
+}
+
+.links a:hover{
+  color:#c9a96a
+}
+
+/* البداية */
+.hero{
+  min-height:100vh;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  padding:120px 7% 70px;
+  background:radial-gradient(
+    circle at 50% 35%,
+    #241e13 0,
+    #0b0b0b 38%,
+    #080808 72%
+  )
+}
+
+.eyebrow{
+  color:#c9a96a;
+  letter-spacing:4px;
+  font-size:13px
+}
+
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(50px,9vw,110px);
+  line-height:1.05;
+  margin:18px 0
+}
+
+.hero p{
+  font-size:20px;
+  color:#c8c2b6;
+  margin:0 auto 30px;
+  max-width:650px
+}
+
+.btn{
+  display:inline-block;
+  padding:12px 25px;
+  border:1px solid #c9a96a;
+  border-radius:30px;
+  color:#e5cf9e
+}
+
+/* الأقسام */
+.section{
+  padding:62px 7%;
+  max-width:1250px;
+  margin:auto
+}
+
+.kicker{
+  color:#c9a96a;
+  font-size:13px;
+  letter-spacing:2px
+}
+
+.section h2{
+  font-family:'Playfair Display',serif;
+  font-size:42px;
+  margin:5px 0 12px
+}
+
+.lead{
+  max-width:780px;
+  color:#bbb5aa;
+  font-size:18px;
+  margin-top:0
+}
+
+/* البطاقات */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;
+  margin-top:22px
+}
+
+.card{
+  background:#101010;
+  border:1px solid #26231e;
+  border-radius:18px;
+  padding:24px;
+  min-height:150px
+}
+
+.card strong{
+  font-size:24px;
+  color:#c9a96a;
+  display:block;
+  margin-bottom:5px
+}
+
+/* الخط الزمني */
+.timeline{
+  border-right:1px solid #3b3325;
+  margin-top:22px
+}
+
+.step{
+  position:relative;
+  padding:0 30px 22px
+}
+
+.step:before{
+  content:'';
+  position:absolute;
+  right:-6px;
+  top:9px;
+  width:11px;
+  height:11px;
+  border-radius:50%;
+  background:#c9a96a
+}
+
+.step h3{
+  margin:0 0 2px
+}
+
+.muted{
+  color:#9f998e
+}
+
+/* المنتخبات */
+.teams{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+  gap:10px;
+  margin-top:22px
+}
+
+.team{
+  padding:17px 10px;
+  text-align:center;
+  border:1px solid #24211c;
+  border-radius:12px;
+  background:#0d0d0d;
+  color:#ddd7cc
+}
+
+.num{
+  color:#c9a96a;
+  font-size:12px
+}
+
+/* اللجنة */
+.committee{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:16px;
+  margin-top:22px
+}
+
+.role{
+  padding:25px;
+  border-top:1px solid #c9a96a;
+  background:#101010;
+  border-radius:16px
+}
+
+/* الراعي */
+.sponsor{
+  text-align:center;
+  border:1px solid #3b3121;
+  border-radius:24px;
+  padding:45px 25px;
+  background:linear-gradient(
+    145deg,
+    #15120d,
+    #0c0c0c
+  )
+}
+
+.sponsor .name{
+  font-size:52px;
+  font-weight:800;
+  color:#c9a96a
+}
+
+/* المباريات */
+.matches{
+  overflow:auto;
+  margin-top:22px
+}
+
+.matches table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:600px
+}
+
+.matches th,
+.matches td{
+  padding:15px;
+  border-bottom:1px solid #27231e;
+  text-align:right
+}
+
+.matches th{
+  color:#c9a96a
+}
+
+/* الختام */
+.closing{
+  text-align:center;
+  padding:90px 7%;
+  background:radial-gradient(
+    circle at center,
+    #211a10,
+    #080808 55%
+  )
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  color:#777;
+  border-top:1px solid #201e1a;
+  font-size:12px
+}
+
+/* الجوال */
+@media(max-width:750px){
+
+  .links{
+    display:none
+  }
+
+  .section{
+    padding:48px 6%
+  }
+
+  .section h2{
+    font-size:34px
+  }
+
+  .hero h1{
+    font-size:55px
+  }
+
+}
+</style>
+</head>
+
 <body>
-<nav class="nav"><div class="brand">عزيز <span>قوم</span> 2026</div><div class="links"><a href="#story">القصة</a><a href="#teams">المنتخبات</a><a href="#committee">اللجنة</a><a href="#behind">خلف الكواليس</a><a href="#matches">النتائج</a></div></nav>
-<header class="hero"><div><div class="eyebrow">محاكاة المونديال • 2026</div><h1>كأس عزيز قوم</h1><p>من فكرة بدأت بحماس… إلى بطولة عاشت تفاصيلها على أرض الواقع الافتراضي.</p><a class="btn" href="#story">اكتشف القصة ↓</a></div></header>
-<section class="section" id="story"><div class="kicker">01 — البداية</div><h2>كيف بدأت الفكرة؟</h2><p class="lead">لم تكن البداية مجرد بطولة؛ كانت فكرة لصناعة تجربة كاملة، تجمع المنتخبات والجمهور والتنظيم والحماس في محاكاة واحدة تحمل روح كأس العالم بطريقتها الخاصة.</p></section>
-<section class="section"><div class="kicker">02 — التنفيذ</div><h2>من الفكرة إلى التنفيذ</h2><p class="lead">وراء كل لحظة ظهرت للجمهور تفاصيل كثيرة: تخطيط، تنسيق، إعداد، محتوى، متابعة، وتجهيز مستمر حتى خرجت البطولة بالصورة التي تستحقها.</p><div class="timeline"><div class="step"><h3>الفكرة</h3><div class="muted">تحديد هوية البطولة وبناء تصور التجربة.</div></div><div class="step"><h3>التخطيط</h3><div class="muted">تنظيم المشاركات والهوية والجدول والمحتوى.</div></div><div class="step"><h3>التنفيذ</h3><div class="muted">تحويل الخطة إلى تجربة متكاملة ومتابعة تفاصيلها.</div></div><div class="step"><h3>الانطلاق</h3><div class="muted">افتتاح البطولة وبدء المنافسة.</div></div></div></section>
-<section class="section" id="teams"><div class="kicker">03 — المشاركون</div><h2>المنتخبات المشاركة</h2><p class="lead">64 منتخبًا. بطولة واحدة. أسماء تمثل خريطة عالمية صنعت تنوع البطولة.</p><div class="teams" id="teamGrid"></div></section>
-<section class="section" id="committee"><div class="kicker">04 — خلف الإنجاز</div><h2>اللجنة التنظيمية</h2><p class="lead">الواجهة تشاهدها الجماهير، لكن خلفها فريق يعمل على التفاصيل الصغيرة قبل الكبيرة.</p><div class="committee"><div class="role"><h3>الإدارة والتنظيم</h3><p class="muted">التخطيط العام، التنسيق، وإدارة مراحل البطولة.</p></div><div class="role"><h3>المحتوى والإعلام</h3><p class="muted">صناعة الهوية البصرية والمحتوى ومواكبة أحداث البطولة.</p></div><div class="role"><h3>التنسيق والمتابعة</h3><p class="muted">متابعة المشاركات والتجهيزات وضمان سير العمل.</p></div></div></section>
-<section class="section" id="behind"><div class="kicker">05 — ما لا يظهر</div><h2>خلف الكواليس</h2><p class="lead">قبل أن تصل أي صورة أو إعلان أو نتيجة إلى الجمهور، كانت هناك ساعات من التحضير والمراجعة وإعادة الترتيب. هنا تُحكى قيمة العمل الذي لا يظهر في الصورة.</p><div class="grid"><div class="card"><strong>التفاصيل</strong><span class="muted">كل عنصر له مكانه ووقته.</span></div><div class="card"><strong>الهوية</strong><span class="muted">حضور بصري موحّد يربط البطولة بتجربتها.</span></div><div class="card"><strong>الاستمرارية</strong><span class="muted">متابعة متواصلة من البداية حتى الختام.</span></div></div></section>
-<section class="section"><div class="kicker">06 — الشريك</div><h2>الراعي الرسمي</h2><div class="sponsor"><div class="name">إليانور</div><p class="muted">الراعي الرسمي لكأس عزيز قوم 2026</p></div></section>
-<section class="section" id="matches"><div class="kicker">07 — المنافسة</div><h2>المباريات والنتائج</h2><p class="lead">سجل مختصر للنتائج التي ستُضاف إلى أرشيف البطولة.</p><div class="matches"><table><thead><tr><th>المباراة</th><th>النتيجة</th><th>المرحلة</th></tr></thead><tbody><tr><td>سيتم تحديث السجل</td><td>—</td><td>—</td></tr></tbody></table></div></section>
-<section class="closing"><div class="kicker">08 — الختام</div><h2>أكثر من بطولة</h2><p class="lead" style="margin:auto">تبقى قيمة كأس عزيز قوم في الفكرة، وفي الأشخاص الذين صنعوا تفاصيلها، وفي الذكريات التي تركتها وراءها.</p></section>
-<footer>كأس عزيز قوم 2026 • محاكاة المونديال</footer>
+
+<!-- الشريط العلوي -->
+<nav class="nav">
+
+  <div class="brand">
+    عزيز <span>قوم</span> 2026
+  </div>
+
+  <div class="links">
+    <a href="#story">القصة</a>
+    <a href="#teams">المنتخبات</a>
+    <a href="#committee">اللجنة</a>
+    <a href="#behind">خلف الكواليس</a>
+    <a href="#matches">النتائج</a>
+  </div>
+
+</nav>
+
+
+<!-- الواجهة الرئيسية -->
+<header class="hero">
+
+  <div>
+
+    <div class="eyebrow">
+      محاكاة المونديال • 2026
+    </div>
+
+    <h1>
+      كأس عزيز قوم
+    </h1>
+
+    <p>
+      من فكرة بدأت بحماس… إلى بطولة عاشت تفاصيلها على أرض الواقع الافتراضي.
+    </p>
+
+    <a class="btn" href="#story">
+      اكتشف القصة ↓
+    </a>
+
+  </div>
+
+</header>
+
+
+<!-- البداية -->
+<section class="section" id="story">
+
+  <div class="kicker">
+    البداية
+  </div>
+
+  <h2>
+    كيف بدأت الفكرة؟
+  </h2>
+
+  <p class="lead">
+    لم تكن البداية مجرد بطولة؛ كانت فكرة لصناعة تجربة كاملة،
+    تجمع المنتخبات والجمهور والتنظيم والحماس في محاكاة واحدة
+    تحمل روح كأس العالم بطريقتها الخاصة.
+  </p>
+
+</section>
+
+
+<!-- التنفيذ -->
+<section class="section">
+
+  <div class="kicker">
+    التنفيذ
+  </div>
+
+  <h2>
+    من الفكرة إلى التنفيذ
+  </h2>
+
+  <p class="lead">
+    وراء كل لحظة ظهرت للجمهور تفاصيل كثيرة:
+    تخطيط، تنسيق، إعداد، محتوى، متابعة،
+    وتجهيز مستمر حتى خرجت البطولة بالصورة التي تستحقها.
+  </p>
+
+  <div class="timeline">
+
+    <div class="step">
+      <h3>الفكرة</h3>
+      <div class="muted">
+        تحديد هوية البطولة وبناء تصور التجربة.
+      </div>
+    </div>
+
+    <div class="step">
+      <h3>التخطيط</h3>
+      <div class="muted">
+        تنظيم المشاركات والهوية والجدول والمحتوى.
+      </div>
+    </div>
+
+    <div class="step">
+      <h3>التنفيذ</h3>
+      <div class="muted">
+        تحويل الخطة إلى تجربة متكاملة ومتابعة تفاصيلها.
+      </div>
+    </div>
+
+    <div class="step">
+      <h3>الانطلاق</h3>
+      <div class="muted">
+        افتتاح البطولة وبدء المنافسة.
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- المنتخبات -->
+<section class="section" id="teams">
+
+  <div class="kicker">
+    المشاركون
+  </div>
+
+  <h2>
+    المنتخبات المشاركة
+  </h2>
+
+  <p class="lead">
+    64 منتخبًا. بطولة واحدة.
+    أسماء تمثل خريطة عالمية صنعت تنوع البطولة.
+  </p>
+
+  <div class="teams" id="teamGrid"></div>
+
+</section>
+
+
+<!-- اللجنة -->
+<section class="section" id="committee">
+
+  <div class="kicker">
+    خلف الإنجاز
+  </div>
+
+  <h2>
+    اللجنة التنظيمية
+  </h2>
+
+  <p class="lead">
+    الواجهة تشاهدها الجماهير،
+    لكن خلفها فريق يعمل على التفاصيل الصغيرة قبل الكبيرة.
+  </p>
+
+  <div class="committee">
+
+    <div class="role">
+      <h3>
+        الإدارة والتنظيم
+      </h3>
+
+      <p class="muted">
+        التخطيط العام، التنسيق،
+        وإدارة مراحل البطولة.
+      </p>
+    </div>
+
+    <div class="role">
+      <h3>
+        المحتوى والإعلام
+      </h3>
+
+      <p class="muted">
+        صناعة الهوية البصرية والمحتوى
+        ومواكبة أحداث البطولة.
+      </p>
+    </div>
+
+    <div class="role">
+      <h3>
+        التنسيق والمتابعة
+      </h3>
+
+      <p class="muted">
+        متابعة المشاركات والتجهيزات
+        وضمان سير العمل.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- خلف الكواليس -->
+<section class="section" id="behind">
+
+  <div class="kicker">
+    ما لا يظهر
+  </div>
+
+  <h2>
+    خلف الكواليس
+  </h2>
+
+  <p class="lead">
+    قبل أن تصل أي صورة أو إعلان أو نتيجة إلى الجمهور،
+    كانت هناك ساعات من التحضير والمراجعة وإعادة الترتيب.
+    هنا تُحكى قيمة العمل الذي لا يظهر في الصورة.
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+      <strong>التفاصيل</strong>
+      <span class="muted">
+        كل عنصر له مكانه ووقته.
+      </span>
+    </div>
+
+    <div class="card">
+      <strong>الهوية</strong>
+      <span class="muted">
+        حضور بصري موحّد يربط البطولة بتجربتها.
+      </span>
+    </div>
+
+    <div class="card">
+      <strong>الاستمرارية</strong>
+      <span class="muted">
+        متابعة متواصلة من البداية حتى الختام.
+      </span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- الراعي -->
+<section class="section">
+
+  <div class="kicker">
+    الشريك
+  </div>
+
+  <h2>
+    الراعي الرسمي
+  </h2>
+
+  <div class="sponsor">
+
+    <div class="name">
+      إليانور
+    </div>
+
+    <p class="muted">
+      الراعي الرسمي لكأس عزيز قوم 2026
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- النتائج -->
+<section class="section" id="matches">
+
+  <div class="kicker">
+    المنافسة
+  </div>
+
+  <h2>
+    المباريات والنتائج
+  </h2>
+
+  <p class="lead">
+    سجل مختصر للنتائج التي ستُضاف إلى أرشيف البطولة.
+  </p>
+
+  <div class="matches">
+
+    <table>
+
+      <thead>
+        <tr>
+          <th>المباراة</th>
+          <th>النتيجة</th>
+          <th>المرحلة</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td>
+            سيتم تحديث السجل
+          </td>
+
+          <td>
+            —
+          </td>
+
+          <td>
+            —
+          </td>
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+</section>
+
+
+<!-- الختام -->
+<section class="closing">
+
+  <div class="kicker">
+    الختام
+  </div>
+
+  <h2>
+    أكثر من بطولة
+  </h2>
+
+  <p class="lead" style="margin:auto">
+
+    تبقى قيمة كأس عزيز قوم في الفكرة،
+    وفي الأشخاص الذين صنعوا تفاصيلها،
+    وفي الذكريات التي تركتها وراءها.
+
+  </p>
+
+</section>
+
+
+<footer>
+  كأس عزيز قوم 2026 • محاكاة المونديال
+</footer>
+
+
 <script>
-const teams=['السعودية','الكويت','قطر','الإمارات','عُمان','البحرين','اليمن','العراق','الأردن','فلسطين','مصر','المغرب','تونس','الجزائر','ليبيا','السودان','موريتانيا','الصومال','جيبوتي','جزر القمر','تركيا','روسيا','الولايات المتحدة','المكسيك','كندا','البرازيل','الأرجنتين','أوروغواي','تشيلي','كولومبيا','بيرو','الإكوادور','بوليفيا','باراغواي','فنزويلا','بنما','كوستاريكا','هندوراس','جامايكا','فرنسا','إسبانيا','إيطاليا','ألمانيا','البرتغال','هولندا','بلجيكا','إنجلترا','سويسرا','النمسا','كرواتيا','صربيا','اليونان','السويد','النرويج','الدنمارك','فنلندا','بولندا','التشيك','أوكرانيا','المغرب','ماليزيا','تونس','السنغال','مالي','نيجيريا'];
-document.getElementById('teamGrid').innerHTML=teams.map((t,i)=>`<div class="team"><div class="num">${String(i+1).padStart(2,'0')}</div>${t}</div>`).join('');
-</script></body></html>
+
+const teams = [
+'السعودية',
+'الكويت',
+'قطر',
+'الإمارات',
+'عُمان',
+'البحرين',
+'اليمن',
+'العراق',
+'الأردن',
+'فلسطين',
+'مصر',
+'المغرب',
+'تونس',
+'الجزائر',
+'ليبيا',
+'السودان',
+'موريتانيا',
+'الصومال',
+'جيبوتي',
+'جزر القمر',
+'تركيا',
+'روسيا',
+'الولايات المتحدة',
+'المكسيك',
+'كندا',
+'البرازيل',
+'الأرجنتين',
+'أوروغواي',
+'تشيلي',
+'كولومبيا',
+'بيرو',
+'الإكوادور',
+'بوليفيا',
+'باراغواي',
+'فنزويلا',
+'بنما',
+'كوستاريكا',
+'هندوراس',
+'جامايكا',
+'فرنسا',
+'إسبانيا',
+'إيطاليا',
+'ألمانيا',
+'البرتغال',
+'هولندا',
+'بلجيكا',
+'إنجلترا',
+'سويسرا',
+'النمسا',
+'كرواتيا',
+'صربيا',
+'اليونان',
+'السويد',
+'النرويج',
+'الدنمارك',
+'فنلندا',
+'بولندا',
+'التشيك',
+'أوكرانيا',
+'المغرب',
+'ماليزيا',
+'تونس',
+'السنغال',
+'مالي',
+'نيجيريا'
+];
+
+document.getElementById('teamGrid').innerHTML =
+teams.map((t,i) =>
+`
+<div class="team">
+  <div class="num">
+    ${String(i+1).padStart(2,'0')}
+  </div>
+  ${t}
+</div>
+`
+).join('');
+
+</script>
+
+</body>
+</html>
