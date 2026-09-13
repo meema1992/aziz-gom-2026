@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
+
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -8,9 +9,11 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
   box-sizing:border-box;
 }
@@ -40,14 +43,14 @@ a{
   position:fixed;
   top:0;
   right:0;
-  z-index:10;
+  z-index:100;
   width:100%;
   padding:15px 5%;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  background:rgba(8,8,8,.84);
-  backdrop-filter:blur(14px);
+  background:rgba(8,8,8,.88);
+  backdrop-filter:blur(16px);
   border-bottom:1px solid #242019;
 }
 
@@ -62,7 +65,7 @@ a{
 
 .links{
   display:flex;
-  gap:20px;
+  gap:22px;
   font-size:13px;
   color:#bdb7ab;
 }
@@ -76,7 +79,7 @@ a{
 }
 
 /* =========================
-   الواجهة الرئيسية
+   الرئيسية
 ========================= */
 
 .hero{
@@ -84,48 +87,48 @@ a{
   display:grid;
   place-items:center;
   text-align:center;
-  padding:120px 7% 70px;
+  padding:120px 7% 80px;
+
   background:
     radial-gradient(
-      circle at 50% 35%,
-      #241e13 0,
-      #0b0b0b 38%,
-      #080808 72%
+      circle at 50% 38%,
+      #2b2316 0,
+      #11100d 28%,
+      #080808 70%
     );
 }
 
-.eyebrow{
-  color:#c9a96a;
-  letter-spacing:4px;
-  font-size:13px;
+.hero-content{
+  max-width:900px;
 }
 
 .hero h1{
   font-family:'Playfair Display',serif;
-  font-size:clamp(50px,9vw,110px);
-  line-height:1.05;
-  margin:18px 0;
+  font-size:clamp(58px,10vw,120px);
+  line-height:1;
+  margin:0 0 25px;
+  letter-spacing:-2px;
+}
+
+.hero .subtitle{
+  font-size:24px;
+  color:#c9a96a;
+  font-weight:600;
+  margin-bottom:18px;
 }
 
 .hero p{
-  font-size:20px;
+  max-width:650px;
+  margin:0 auto;
   color:#c8c2b6;
-  margin:0 auto 30px;
-  max-width:680px;
+  font-size:19px;
 }
 
-.btn{
-  display:inline-block;
-  padding:12px 25px;
-  border:1px solid #c9a96a;
-  border-radius:30px;
-  color:#e5cf9e;
-  transition:.25s;
-}
-
-.btn:hover{
+.hero-line{
+  width:70px;
+  height:1px;
   background:#c9a96a;
-  color:#080808;
+  margin:35px auto;
 }
 
 /* =========================
@@ -133,59 +136,224 @@ a{
 ========================= */
 
 .section{
-  padding:68px 7%;
-  max-width:1250px;
+  max-width:1180px;
   margin:auto;
-}
-
-.kicker{
-  color:#c9a96a;
-  font-size:13px;
-  letter-spacing:2px;
+  padding:105px 7%;
 }
 
 .section h2{
   font-family:'Playfair Display',serif;
-  font-size:42px;
-  margin:5px 0 12px;
+  font-size:clamp(38px,5vw,58px);
+  line-height:1.2;
+  margin:0 0 25px;
 }
 
-.lead{
+.section-intro{
   max-width:780px;
   color:#bbb5aa;
   font-size:18px;
-  margin-top:0;
+  line-height:2.05;
+  margin:0;
 }
 
 /* =========================
-   القصة
+   فواصل الأقسام
 ========================= */
 
-
-
-
+.section + .section{
+  border-top:1px solid #171512;
+}
 
 /* =========================
-   تنسيق القصة الجديدة
+   عزيز قوم
 ========================= */
 
-.story-text{
-  max-width:820px;
-  margin-top:28px;
+.about{
+  display:grid;
+  grid-template-columns:1fr 1.7fr;
+  gap:70px;
+  align-items:start;
+}
+
+.about-title{
+  color:#c9a96a;
+  font-size:14px;
+  letter-spacing:2px;
+  margin-bottom:12px;
+}
+
+.about-text{
   color:#c8c2b6;
   font-size:19px;
+  line-height:2.2;
+}
+
+.about-text p{
+  margin:0 0 22px;
+}
+
+.creator{
+  margin-top:35px;
+  padding-top:20px;
+  border-top:1px solid #2a261f;
+}
+
+.creator strong{
+  display:block;
+  color:#f5f1e8;
+  font-size:20px;
+}
+
+.creator span{
+  color:#9e978b;
+  font-size:14px;
+}
+
+/* =========================
+   أهداف المحاكاة
+========================= */
+
+.goals{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+  margin-top:45px;
+}
+
+.goal{
+  padding:30px;
+  background:#0d0d0d;
+  border:1px solid #25221d;
+  border-radius:18px;
+  transition:.25s;
+}
+
+.goal:hover{
+  border-color:#806b42;
+  transform:translateY(-3px);
+}
+
+.goal-number{
+  color:#c9a96a;
+  font-size:14px;
+  margin-bottom:15px;
+}
+
+.goal h3{
+  margin:0 0 10px;
+  font-size:21px;
+}
+
+.goal p{
+  margin:0;
+  color:#9f998e;
+  line-height:1.9;
+}
+
+/* =========================
+   أهداف تحققت
+========================= */
+
+.achieved{
+  position:relative;
+}
+
+.achieved-box{
+  margin-top:45px;
+  padding:55px;
+  border:1px solid #4a3b25;
+  border-radius:24px;
+  background:
+    radial-gradient(
+      circle at 50% 0,
+      #211a10,
+      #0c0c0c 68%
+    );
+}
+
+.achieved-box h3{
+  font-family:'Playfair Display',serif;
+  font-size:35px;
+  margin:0 0 20px;
+  color:#c9a96a;
+}
+
+.achieved-box p{
+  max-width:850px;
+  margin:0;
+  color:#c8c2b6;
+  font-size:18px;
   line-height:2.15;
 }
 
-.story-text p{
-  margin:0 0 20px;
+.achieved-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  margin-top:35px;
 }
 
-.story-text .story-final{
+.achievement{
+  padding:22px;
+  border-top:1px solid #c9a96a;
+  background:#101010;
+  border-radius:12px;
+}
+
+.achievement strong{
+  display:block;
+  font-size:18px;
+  margin-bottom:7px;
+}
+
+.achievement span{
+  color:#9e978b;
+  font-size:14px;
+}
+
+/* =========================
+   اللجنة
+========================= */
+
+.committee{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:14px;
+  margin-top:45px;
+}
+
+.person{
+  min-height:190px;
+  padding:25px 20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  background:#0e0e0e;
+  border:1px solid #27231d;
+  border-radius:17px;
+  transition:.25s;
+}
+
+.person:hover{
+  border-color:#c9a96a;
+  transform:translateY(-3px);
+}
+
+.person-number{
   color:#c9a96a;
-  font-weight:800;
-  font-size:22px;
-  margin-top:28px;
+  font-size:12px;
+  margin-bottom:auto;
+}
+
+.person h3{
+  margin:0 0 5px;
+  font-size:20px;
+}
+
+.person p{
+  margin:0;
+  color:#969084;
+  font-size:13px;
 }
 
 /* =========================
@@ -194,19 +362,20 @@ a{
 
 .teams{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(135px,1fr));
+  grid-template-columns:repeat(6,1fr);
   gap:10px;
-  margin-top:28px;
+  margin-top:45px;
 }
 
 .team{
-  padding:17px 10px;
+  padding:16px 8px;
   text-align:center;
   border:1px solid #24211c;
-  border-radius:12px;
+  border-radius:11px;
   background:#0d0d0d;
   color:#ddd7cc;
   transition:.2s;
+  font-size:14px;
 }
 
 .team:hover{
@@ -216,69 +385,18 @@ a{
 
 .num{
   color:#c9a96a;
-  font-size:12px;
-  margin-bottom:3px;
+  font-size:11px;
+  margin-bottom:2px;
 }
 
 /* =========================
-   اللجنة التنظيمية
-========================= */
-
-.committee{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  gap:16px;
-  margin-top:28px;
-}
-
-.role{
-  padding:25px;
-  border-top:1px solid #c9a96a;
-  background:#101010;
-  border-radius:16px;
-}
-
-.role h3{
-  margin-top:0;
-}
-
-.muted{
-  color:#9f998e;
-}
-
-/* =========================
-   خلف الكواليس
-========================= */
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:16px;
-  margin-top:28px;
-}
-
-.card{
-  background:#101010;
-  border:1px solid #26231e;
-  border-radius:18px;
-  padding:24px;
-  min-height:150px;
-}
-
-.card strong{
-  font-size:24px;
-  color:#c9a96a;
-  display:block;
-  margin-bottom:5px;
-}
-
-/* =========================
-   الراعي الرسمي
+   إليانور
 ========================= */
 
 .sponsor-section{
-  padding-top:45px;
-  padding-bottom:75px;
+  max-width:1180px;
+  margin:auto;
+  padding:105px 7%;
 }
 
 .sponsor{
@@ -287,12 +405,12 @@ a{
   text-align:center;
   border:1px solid #4a3b25;
   border-radius:28px;
-  padding:60px 25px;
+  padding:75px 25px;
   background:
     radial-gradient(
       circle at center,
-      #211a10,
-      #0c0c0c 65%
+      #251d11,
+      #0b0b0b 65%
     );
 }
 
@@ -314,85 +432,64 @@ a{
 
 .sponsor .name{
   position:relative;
-  font-size:clamp(44px,8vw,72px);
+  font-size:clamp(55px,9vw,90px);
   font-weight:800;
   color:#c9a96a;
-  margin:8px 0;
+  margin:10px 0 18px;
 }
 
 .sponsor p{
   position:relative;
-  margin:0;
+  max-width:650px;
+  margin:auto;
+  color:#b5aea2;
+  font-size:17px;
 }
 
 /* =========================
-   المباريات والنتائج
-========================= */
-
-.matches{
-  overflow:auto;
-  margin-top:28px;
-  border:1px solid #26231e;
-  border-radius:18px;
-}
-
-.matches table{
-  width:100%;
-  border-collapse:collapse;
-  min-width:600px;
-}
-
-.matches th,
-.matches td{
-  padding:17px;
-  border-bottom:1px solid #27231e;
-  text-align:right;
-}
-
-.matches th{
-  color:#c9a96a;
-  background:#101010;
-}
-
-.matches tr:last-child td{
-  border-bottom:none;
-}
-
-.empty-row{
-  text-align:center !important;
-  color:#777;
-  padding:30px !important;
-}
-
-/* =========================
-   الختام
+   النهاية
 ========================= */
 
 .closing{
+  min-height:70vh;
+  display:grid;
+  place-items:center;
   text-align:center;
-  padding:110px 7%;
+  padding:100px 7%;
+
   background:
     radial-gradient(
       circle at center,
       #211a10,
-      #080808 58%
+      #080808 60%
     );
+
   border-top:1px solid #201c16;
 }
 
-.closing .kicker{
-  margin-bottom:5px;
+.closing-content{
+  max-width:800px;
 }
 
 .closing h2{
   font-family:'Playfair Display',serif;
-  font-size:clamp(42px,7vw,68px);
-  margin:0 0 15px;
+  font-size:clamp(50px,8vw,85px);
+  line-height:1.1;
+  margin:0 0 25px;
 }
 
-.closing .lead{
-  margin:auto;
-  max-width:700px;
+.closing p{
+  color:#bbb5aa;
+  font-size:19px;
+  line-height:2;
+  margin:0;
+}
+
+.closing-line{
+  width:60px;
+  height:1px;
+  background:#c9a96a;
+  margin:35px auto;
 }
 
 /* =========================
@@ -401,8 +498,8 @@ a{
 
 footer{
   text-align:center;
-  padding:28px;
-  color:#777;
+  padding:30px;
+  color:#6f6a61;
   border-top:1px solid #201e1a;
   font-size:12px;
 }
@@ -410,6 +507,27 @@ footer{
 /* =========================
    الجوال
 ========================= */
+
+@media(max-width:900px){
+
+  .committee{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .teams{
+    grid-template-columns:repeat(4,1fr);
+  }
+
+  .about{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
+  .achieved-grid{
+    grid-template-columns:1fr;
+  }
+
+}
 
 @media(max-width:750px){
 
@@ -421,48 +539,90 @@ footer{
     padding:14px 6%;
   }
 
-  .section{
-    padding:52px 6%;
-  }
-
-  .section h2{
-    font-size:34px;
-  }
-
   .hero{
-    padding:110px 6% 60px;
+    padding:110px 6% 70px;
   }
 
   .hero h1{
-    font-size:55px;
+    font-size:58px;
+  }
+
+  .hero .subtitle{
+    font-size:19px;
   }
 
   .hero p{
     font-size:17px;
   }
 
-  .story-text{
-    font-size:17px;
-    line-height:2;
+  .section,
+  .sponsor-section{
+    padding:75px 6%;
   }
 
-  .story-text .story-final{
-    font-size:20px;
+  .section h2{
+    font-size:39px;
+  }
+
+  .section-intro{
+    font-size:16px;
+  }
+
+  .goals{
+    grid-template-columns:1fr;
+  }
+
+  .achieved-box{
+    padding:35px 22px;
+  }
+
+  .achieved-box h3{
+    font-size:29px;
+  }
+
+  .committee{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .teams{
+    grid-template-columns:repeat(3,1fr);
+    gap:8px;
+  }
+
+  .team{
+    font-size:13px;
+    padding:13px 5px;
   }
 
   .sponsor{
-    padding:48px 20px;
+    padding:55px 18px;
   }
 
   .closing{
-    padding:85px 6%;
+    min-height:65vh;
+    padding:80px 6%;
   }
 
 }
+
+@media(max-width:480px){
+
+  .committee{
+    grid-template-columns:1fr;
+  }
+
+  .teams{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
 </style>
 </head>
 
+
 <body>
+
 
 <!-- =========================
      الشريط العلوي
@@ -475,40 +635,41 @@ footer{
   </div>
 
   <div class="links">
-    <a href="#story">القصة</a>
-    <a href="#teams">المنتخبات</a>
+    <a href="#about">عزيز قوم</a>
+    <a href="#goals">أهداف المحاكاة</a>
+    <a href="#achieved">ما تحقق</a>
     <a href="#committee">اللجنة</a>
-    <a href="#behind">خلف الكواليس</a>
-    <a href="#matches">النتائج</a>
+    <a href="#teams">المنتخبات</a>
+    <a href="#eleanor">إليانور</a>
   </div>
 
 </nav>
 
 
 <!-- =========================
-     الواجهة الرئيسية
+     الرئيسية
 ========================= -->
 
 <header class="hero">
 
-  <div>
+  <div class="hero-content">
 
-    <div class="eyebrow">
-      محاكاة المونديال • 2026
+    <div class="subtitle">
+      محاكاة المونديال 2026
     </div>
 
     <h1>
       كأس عزيز قوم
     </h1>
 
-    <p>
-      من فكرة بدأت بحماس… إلى بطولة عاشت تفاصيلها
-      وصنعت ذكرياتها بطريقتها الخاصة.
-    </p>
+    <div class="hero-line"></div>
 
-    <a class="btn" href="#story">
-      اكتشف القصة ↓
-    </a>
+    <p>
+      فكرة صنعت تجربة؛
+      تجربة تجاوزت حدود المباراة،
+      وخلقت عالمًا كاملًا من المنافسة،
+      المحتوى، المشاركة والذكريات.
+    </p>
 
   </div>
 
@@ -516,29 +677,317 @@ footer{
 
 
 <!-- =========================
-     القصة
+     عزيز قوم
 ========================= -->
 
-<section class="section" id="story">
+<section class="section" id="about">
 
-  <div class="kicker">
-    القصة
+  <div class="about">
+
+    <div>
+
+      <div class="about-title">
+        صاحب الفكرة
+      </div>
+
+      <h2>
+        عزيز قوم
+      </h2>
+
+    </div>
+
+
+    <div class="about-text">
+
+      <p>
+        بدأت حكاية كأس عزيز قوم من فكرة أرادت أن تمنح محاكاة المونديال معنى مختلفًا؛
+        لا تكتفي بمتابعة المباريات، بل تصنع تجربة يعيشها المشاركون والمتابعون بكل تفاصيلها.
+      </p>
+
+      <p>
+        ومع اتساع الفكرة، تحولت المحاكاة إلى مشروع متكامل يجمع المنتخبات،
+        والمحتوى، والهوية، والتفاعل، والعمل الجماعي في تجربة واحدة.
+      </p>
+
+      <p>
+        ومن هنا وُلد كأس عزيز قوم؛
+        مشروع حمل فكرته صاحبه، ثم كبر بتفاعل المشاركين وجهود من وقفوا خلفه.
+      </p>
+
+      <div class="creator">
+
+        <strong>
+          عزيز قوم
+        </strong>
+
+        <span>
+          صاحب الفكرة ومنشئ كأس عزيز قوم
+        </span>
+
+      </div>
+
+    </div>
+
   </div>
 
+</section>
+
+
+<!-- =========================
+     أهداف المحاكاة
+========================= -->
+
+<section class="section" id="goals">
+
   <h2>
-    من فكرة إلى بطولة
+    أهداف المحاكاة
   </h2>
 
-  <div class="story-text">
-    <p>بدأت الفكرة كحلم لصناعة تجربة مختلفة؛</p>
+  <p class="section-intro">
+    لم تكن المحاكاة مجرد إعادة لأجواء بطولة كروية،
+    بل تجربة تهدف إلى صناعة مساحة تجمع المنافسة والإبداع
+    والمشاركة، وتفتح المجال لاكتشاف ما يمكن أن تصنعه الفكرة عندما تجد من يؤمن بها.
+  </p>
 
-    <p>تجربة تحاكي أجواء كأس العالم، وتمنح المشاركين فرصة ليعيشوا البطولة بتفاصيلها.</p>
 
-    <p>ومع اتساع الفكرة، بدأت ملامح المونديال تتشكل؛ منتخبات، مراكز إعلامية، أطقم، مباريات، ومنافسة تمتد من البداية حتى صافرة النهاية.</p>
+  <div class="goals">
 
-    <p>لم تعد الفكرة مجرد محاكاة لمباريات كرة القدم، بل أصبحت عالمًا كاملًا صنعه المشاركون وعاشه المتابعون.</p>
+    <div class="goal">
 
-    <p class="story-final">وهنا بدأت حكاية كأس عزيز قوم.</p>
+      <div class="goal-number">01</div>
+
+      <h3>
+        صناعة تجربة مختلفة
+      </h3>
+
+      <p>
+        تقديم محاكاة تتجاوز نتيجة المباراة إلى تجربة متكاملة يعيش فيها المشاركون أجواء المونديال.
+      </p>
+
+    </div>
+
+
+    <div class="goal">
+
+      <div class="goal-number">02</div>
+
+      <h3>
+        تعزيز المشاركة
+      </h3>
+
+      <p>
+        تحويل المتابع من مشاهد إلى جزء من الحدث، وصناعة مساحة حقيقية للتفاعل والحضور.
+      </p>
+
+    </div>
+
+
+    <div class="goal">
+
+      <div class="goal-number">03</div>
+
+      <h3>
+        إطلاق مساحة للإبداع
+      </h3>
+
+      <p>
+        فتح المجال لصناعة المحتوى والهوية الإعلامية والقصص المصاحبة لكل منتخب ومباراة.
+      </p>
+
+    </div>
+
+
+    <div class="goal">
+
+      <div class="goal-number">04</div>
+
+      <h3>
+        بناء مجتمع حول الفكرة
+      </h3>
+
+      <p>
+        جمع أشخاص من دول وفرق مختلفة حول مشروع واحد، وتحويل المنافسة إلى تجربة مشتركة.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     أهداف تحققت
+========================= -->
+
+<section class="section achieved" id="achieved">
+
+  <h2>
+    أهداف تحققت
+  </h2>
+
+  <p class="section-intro">
+    ما بدأ كفكرة لم يبقَ فكرة.
+    ومع الوقت ظهرت نتائج المحاكاة في حجم المشاركة،
+    وتنوع المحتوى، والتفاعل، والجهد الذي بذله المشاركون خلف كل تفصيلة.
+  </p>
+
+
+  <div class="achieved-box">
+
+    <h3>
+      الفكرة أصبحت واقعًا
+    </h3>
+
+    <p>
+      استطاعت المحاكاة أن تبني بطولة واسعة المشاركة،
+      تجمع عشرات المنتخبات والشخصيات والمحتويات في تجربة واحدة،
+      وأن تمنح المشاركين مساحة لصناعة أدوارهم وهوياتهم الخاصة.
+      والأهم أنها أثبتت أن المشروع الرقمي يمكن أن يتحول،
+      بالمبادرة والعمل الجماعي، إلى تجربة يعيشها الناس ويتذكرونها.
+    </p>
+
+
+    <div class="achieved-grid">
+
+      <div class="achievement">
+
+        <strong>
+          68 منتخبًا
+        </strong>
+
+        <span>
+          مشاركة واسعة صنعت تنوع البطولة
+        </span>
+
+      </div>
+
+
+      <div class="achievement">
+
+        <strong>
+          تجربة متكاملة
+        </strong>
+
+        <span>
+          من المنتخبات والمحتوى إلى المنافسة والتفاعل
+        </span>
+
+      </div>
+
+
+      <div class="achievement">
+
+        <strong>
+          مجتمع من المشاركين
+        </strong>
+
+        <span>
+          أشخاص جمعهم مشروع واحد وفكرة واحدة
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     اللجنة التنظيمية
+========================= -->
+
+<section class="section" id="committee">
+
+  <h2>
+    اللجنة التنظيمية
+  </h2>
+
+  <p class="section-intro">
+    خلف كل تجربة ناجحة أشخاص يمنحون الفكرة وقتهم وجهدهم.
+    وهنا تأتي اللجنة التي ساهمت في تحويل الفكرة إلى تفاصيل،
+    ومتابعة العمل حتى ظهرت البطولة بالصورة التي وصلت إليها.
+  </p>
+
+
+  <div class="committee">
+
+    <div class="person">
+
+      <div class="person-number">01</div>
+
+      <h3>
+        عزيز قوم
+      </h3>
+
+      <p>
+        صاحب الفكرة ومنشئ المشروع
+      </p>
+
+    </div>
+
+
+    <div class="person">
+
+      <div class="person-number">02</div>
+
+      <h3>
+        حمادة
+      </h3>
+
+      <p>
+        ضمن اللجنة التنظيمية
+      </p>
+
+    </div>
+
+
+    <div class="person">
+
+      <div class="person-number">03</div>
+
+      <h3>
+        الريم
+      </h3>
+
+      <p>
+        ضمن اللجنة التنظيمية
+      </p>
+
+    </div>
+
+
+    <div class="person">
+
+      <div class="person-number">04</div>
+
+      <h3>
+        شموخ الشمري
+      </h3>
+
+      <p>
+        ضمن اللجنة التنظيمية
+      </p>
+
+    </div>
+
+
+    <div class="person">
+
+      <div class="person-number">05</div>
+
+      <h3>
+        أم ورد
+      </h3>
+
+      <p>
+        ضمن اللجنة التنظيمية
+      </p>
+
+    </div>
+
   </div>
 
 </section>
@@ -550,18 +999,15 @@ footer{
 
 <section class="section" id="teams">
 
-  <div class="kicker">
-    المشاركون
-  </div>
-
   <h2>
     المنتخبات المشاركة
   </h2>
 
-  <p class="lead">
-    68 منتخبًا. بطولة واحدة.
-    أسماء صنعت تنوع البطولة وحضرت في تفاصيلها.
+  <p class="section-intro">
+    68 منتخبًا شاركوا في صناعة المشهد،
+    وجعلوا من المحاكاة مساحة واسعة للتنوع والمنافسة والتفاعل.
   </p>
+
 
   <div class="teams" id="teamGrid"></div>
 
@@ -569,160 +1015,30 @@ footer{
 
 
 <!-- =========================
-     اللجنة التنظيمية
+     إليانور
 ========================= -->
 
-<section class="section" id="committee">
-
-  <div class="kicker">
-    خلف الإنجاز
-  </div>
+<section class="sponsor-section" id="eleanor">
 
   <h2>
-    اللجنة التنظيمية
-  </h2>
-
-  <p class="lead">
-    الواجهة تشاهدها الجماهير،
-    لكن خلفها فريق يعمل على التفاصيل الصغيرة
-    قبل الكبيرة، حتى تخرج التجربة بالشكل الذي تستحقه.
-  </p>
-
-  <div class="committee">
-
-    <div class="role">
-
-      <h3>
-        الإدارة والتنظيم
-      </h3>
-
-      <p class="muted">
-        التخطيط العام، التنسيق،
-        وإدارة مراحل البطولة.
-      </p>
-
-    </div>
-
-    <div class="role">
-
-      <h3>
-        المحتوى والإعلام
-      </h3>
-
-      <p class="muted">
-        صناعة الهوية البصرية والمحتوى
-        ومواكبة أحداث البطولة.
-      </p>
-
-    </div>
-
-    <div class="role">
-
-      <h3>
-        التنسيق والمتابعة
-      </h3>
-
-      <p class="muted">
-        متابعة المشاركات والتجهيزات
-        وضمان سير العمل.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     خلف الكواليس
-========================= -->
-
-<section class="section" id="behind">
-
-  <div class="kicker">
-    ما لا يظهر
-  </div>
-
-  <h2>
-    خلف الكواليس
-  </h2>
-
-  <p class="lead">
-    قبل أن تصل أي صورة أو إعلان أو نتيجة إلى الجمهور،
-    كانت هناك ساعات من التحضير والمراجعة وإعادة الترتيب.
-    هنا تظهر قيمة العمل الذي لا يظهر في الصورة.
-  </p>
-
-  <div class="grid">
-
-    <div class="card">
-
-      <strong>
-        التفاصيل
-      </strong>
-
-      <span class="muted">
-        كل عنصر له مكانه ووقته.
-      </span>
-
-    </div>
-
-    <div class="card">
-
-      <strong>
-        الهوية
-      </strong>
-
-      <span class="muted">
-        حضور بصري موحّد يربط البطولة بتجربتها.
-      </span>
-
-    </div>
-
-    <div class="card">
-
-      <strong>
-        الاستمرارية
-      </strong>
-
-      <span class="muted">
-        متابعة متواصلة من البداية حتى الختام.
-      </span>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     الراعي الرسمي
-========================= -->
-
-<section class="section sponsor-section">
-
-  <div class="kicker">
-    الشريك
-  </div>
-
-  <h2>
-    الراعي الرسمي
+    إليانور
   </h2>
 
   <div class="sponsor">
 
     <div class="sponsor-label">
-      الراعي الرسمي لكأس عزيز قوم 2026
+      الراعي الرسمي
     </div>
 
     <div class="name">
       إليانور
     </div>
 
-    <p class="muted">
-      شريك البطولة
+    <p>
+      شريك كأس عزيز قوم 2026،
+      وداعم أساسي لهذه التجربة منذ انطلاقها.
+      حضورها لم يكن مجرد رعاية،
+      بل جزء من الرحلة التي ساعدت على استمرار الفكرة ووصولها إلى هذا الحجم.
     </p>
 
   </div>
@@ -731,84 +1047,36 @@ footer{
 
 
 <!-- =========================
-     المباريات والنتائج
-========================= -->
-
-<section class="section" id="matches">
-
-  <div class="kicker">
-    المنافسة
-  </div>
-
-  <h2>
-    المباريات والنتائج
-  </h2>
-
-  <p class="lead">
-    سجل مختصر يحتفظ بلحظات المنافسة
-    ونتائج المباريات في أرشيف البطولة.
-  </p>
-
-  <div class="matches">
-
-    <table>
-
-      <thead>
-
-        <tr>
-          <th>المباراة</th>
-          <th>النتيجة</th>
-          <th>المرحلة</th>
-        </tr>
-
-      </thead>
-
-      <tbody id="matchesBody">
-
-        <tr>
-          <td colspan="3" class="empty-row">
-            ستُضاف النتائج هنا مع تقدم البطولة.
-          </td>
-        </tr>
-
-      </tbody>
-
-    </table>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     الختام
+     النهاية
 ========================= -->
 
 <section class="closing">
 
-  <div class="kicker">
-    الختام
+  <div class="closing-content">
+
+    <h2>
+      أكثر من بطولة
+    </h2>
+
+    <div class="closing-line"></div>
+
+    <p>
+      لأن بعض الأفكار لا تُقاس بنتائجها فقط،
+      بل بالأثر الذي تتركه فيمن شارك فيها.
+      كأس عزيز قوم كان فكرة،
+      ثم أصبح تجربة،
+      وأصبح لها أصحاب وذكريات وحكاية تستحق أن تُروى.
+    </p>
+
   </div>
-
-  <h2>
-    أكثر من بطولة
-  </h2>
-
-  <p class="lead">
-
-    تبقى قيمة كأس عزيز قوم في الفكرة،
-    وفي الأشخاص الذين صنعوا تفاصيلها،
-    وفي اللحظات التي تحولت إلى ذكريات،
-    وفي تجربة أثبتت أن الحماس يستطيع
-    أن يصنع بطولة كاملة.
-
-  </p>
 
 </section>
 
 
 <footer>
-  كأس عزيز قوم 2026 • محاكاة المونديال
+
+  كأس عزيز قوم 2026
+
 </footer>
 
 
@@ -819,6 +1087,7 @@ footer{
 ========================= */
 
 const teams = [
+
   'أذربيجان',
   'رومانيا',
   'مالي',
@@ -887,54 +1156,31 @@ const teams = [
   'قبرص',
   'بوليفيا',
   'كوراساو'
+
 ];
 
 
-/* إنشاء بطاقات المنتخبات */
+/* إنشاء المنتخبات */
 
 document.getElementById('teamGrid').innerHTML =
+
   teams.map((team,index) => `
+
     <div class="team">
+
       <div class="num">
         ${String(index + 1).padStart(2,'0')}
       </div>
+
       ${team}
+
     </div>
+
   `).join('');
 
-
-/* =========================
-   المباريات والنتائج
-=========================
-
-   لإضافة مباراة لاحقًا، نضيفها
-   داخل القائمة بهذا الشكل:
-
-   {
-     game:'الكويت × تركيا',
-     score:'1 — 0',
-     stage:'مباراة ودية'
-   }
-
-========================= */
-
-const matches = [];
-
-const matchesBody = document.getElementById('matchesBody');
-
-if(matches.length > 0){
-
-  matchesBody.innerHTML = matches.map(match => `
-    <tr>
-      <td>${match.game}</td>
-      <td>${match.score}</td>
-      <td>${match.stage}</td>
-    </tr>
-  `).join('');
-
-}
 
 </script>
+
 
 </body>
 </html>
