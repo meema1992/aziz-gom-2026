@@ -1,208 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>كأس عزيز قوم 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700;800&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
-:root{
- --ink:#080909;--ink2:#101211;--paper:#eee9df;--white:#faf8f2;
- --gold:#c7a66a;--gold2:#8d713d;--muted:#aaa59b;
- --line:rgba(199,166,106,.23);--soft:rgba(255,255,255,.055)
-}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--ink);color:var(--white);font-family:Tajawal,Arial,sans-serif;line-height:1.95}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.055;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");z-index:50}
-a{color:inherit;text-decoration:none}
-nav{position:fixed;z-index:40;top:18px;left:50%;transform:translateX(-50%);width:min(930px,calc(100% - 28px));display:flex;justify-content:center;gap:3px;padding:8px;border:1px solid rgba(255,255,255,.09);border-radius:999px;background:rgba(10,11,11,.7);backdrop-filter:blur(22px);box-shadow:0 18px 60px #0008}
-nav a{font-family:"Noto Kufi Arabic";font-size:10px;color:#c9c4ba;padding:8px 12px;border-radius:999px;transition:.25s}
-nav a:hover{background:rgba(199,166,106,.13);color:#fff}
-.hero{min-height:100vh;position:relative;display:grid;place-items:center;text-align:center;overflow:hidden;background:
-radial-gradient(ellipse at 50% 38%,rgba(199,166,106,.16),transparent 27%),
-radial-gradient(ellipse at 15% 80%,rgba(199,166,106,.06),transparent 30%),
-linear-gradient(180deg,#121413,#080909 75%)}
-.hero:before{content:"";position:absolute;width:780px;height:780px;border:1px solid rgba(199,166,106,.12);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%)}
-.hero:after{content:"";position:absolute;width:610px;height:610px;border:1px solid rgba(199,166,106,.08);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%)}
-.hero-inner{position:relative;z-index:2;padding:120px 22px 80px}
-.eyebrow{font-family:"Noto Kufi Arabic";font-size:11px;letter-spacing:.02em;color:var(--gold);margin-bottom:25px}
-.hero h1{font-family:"Noto Kufi Arabic";font-weight:700;font-size:clamp(40px,8vw,88px);line-height:1.18;margin:0;letter-spacing:-2px}
-.hero h1 span{color:var(--gold)}
-.hero .rule{width:100px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:28px auto}
-.hero p{max-width:650px;margin:auto;color:#bcb7ad;font-size:18px;font-weight:300}
-.scroll{position:absolute;bottom:25px;left:50%;transform:translateX(-50%);font-size:10px;color:#77736b;letter-spacing:.08em}
-.scroll i{display:block;width:1px;height:35px;background:linear-gradient(var(--gold),transparent);margin:8px auto 0}
-section{max-width:1180px;margin:auto;padding:125px 30px}
-.title{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:55px;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:22px}
-.title h2{font-family:"Noto Kufi Arabic";font-size:clamp(27px,4vw,46px);margin:0;font-weight:700}
-.title .num{font-family:"Noto Kufi Arabic";font-size:11px;color:var(--gold);white-space:nowrap}
-.aziz{display:grid;grid-template-columns:minmax(300px,460px) 1fr;gap:75px;align-items:center}
-.frame{position:relative;padding:10px}
-.frame:before,.frame:after{content:"";position:absolute;inset:0;border:1px solid var(--line);pointer-events:none}
-.frame:after{inset:14px;border-color:rgba(255,255,255,.08)}
-.frame img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;filter:saturate(.86);position:relative}
-.aziz-copy h3{font-family:"Noto Kufi Arabic";font-size:28px;line-height:1.6;margin:0 0 22px}
-.aziz-copy p{color:#c5c0b6;font-size:17px;margin:0 0 18px}
-.aziz-copy .signature{margin-top:30px;color:var(--gold);font-family:"Noto Kufi Arabic";font-size:12px}
-.goals{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.09)}
-.goal{background:linear-gradient(145deg,#151716,#0d0e0e);padding:30px 31px;min-height:170px;position:relative;transition:.3s}
-.goal:hover{background:#191b1a}
-.goal:before{content:"";position:absolute;top:0;right:0;width:2px;height:0;background:var(--gold);transition:.3s}.goal:hover:before{height:100%}
-.goal h3{font-family:"Noto Kufi Arabic";font-size:18px;margin:0 0 9px}.goal p{margin:0;color:#a9a49b;font-size:15px}
-.achieved{background:linear-gradient(180deg,#0b0c0c,#121412,#0b0c0c);border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05)}
-.achieved .copy{max-width:900px;margin:auto}
-.copy p{font-size:18px;color:#c9c4bb;margin:0 0 25px}
-.copy p:first-child:first-letter{color:var(--gold);font-size:45px;float:right;line-height:1;margin-left:8px;font-family:"Noto Kufi Arabic"}
-.committee{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.member{border:1px solid rgba(255,255,255,.09);background:#111313;border-radius:2px;overflow:hidden;transition:.3s}
-.member:hover{border-color:var(--line)}
-.member button{all:unset;width:100%;display:grid;grid-template-columns:150px 1fr;cursor:pointer;text-align:right}
-.member img{width:150px;height:150px;object-fit:cover;filter:saturate(.88)}
-.member-head{padding:28px 24px;align-self:center}
-.member-head h3{font-family:"Noto Kufi Arabic";font-size:21px;margin:0 0 6px}.member-head span{color:var(--gold);font-size:12px}
-.body{max-height:0;overflow:hidden;transition:max-height .55s cubic-bezier(.2,.7,.2,1)}
-.member.open .body{max-height:700px}
-.body-inner{border-top:1px solid rgba(255,255,255,.07);padding:27px 29px;color:#c1bcb2;font-size:15px}
-.member button:after{content:"＋";position:absolute}.member{position:relative}.member button:after{left:20px;right:auto;top:20px;color:#837b6d;font-size:18px}.member.open button:after{content:"−";color:var(--gold)}
-.teams{text-align:center;position:relative}
-.teams .big{font-family:"Noto Kufi Arabic";font-size:clamp(90px,15vw,170px);line-height:.9;color:transparent;-webkit-text-stroke:1px var(--gold);margin:0}
-.teams .lead{max-width:720px;margin:35px auto 15px;color:#c1bcb3;font-size:19px}.teams .final{font-family:"Noto Kufi Arabic";font-size:22px;color:var(--gold)}
-.sponsor{display:grid;grid-template-columns:1fr 390px;gap:85px;align-items:center}
-.sponsor .frame img{aspect-ratio:1;object-fit:cover}
-.sponsor h3{font-family:"Noto Kufi Arabic";font-size:34px;margin:0 0 16px}.sponsor p{font-size:18px;color:#c1bcb3}
-.sponsor-mark{display:inline-block;border:1px solid var(--line);padding:9px 17px;color:var(--gold);font-size:11px;margin-top:15px}
-.end{min-height:78vh;display:grid;place-items:center;text-align:center;position:relative}
-.end:before{content:"";position:absolute;width:1px;height:120px;background:linear-gradient(var(--gold),transparent);top:0}
-.end p{font-family:"Noto Kufi Arabic";font-size:clamp(27px,5vw,55px);line-height:1.75;margin:0}
-.end small{display:block;color:#77736b;font-family:Tajawal;margin-top:25px;font-size:12px}
-footer{padding:25px;text-align:center;border-top:1px solid rgba(255,255,255,.07);color:#68645d;font-size:11px}
-@media(max-width:820px){
- nav{justify-content:flex-start}.hero:before{width:550px;height:550px}.hero:after{width:420px;height:420px}
- section{padding:90px 18px}.aziz,.sponsor{grid-template-columns:1fr;gap:38px}.goals,.committee{grid-template-columns:1fr}
- .frame{max-width:440px;margin:auto}.sponsor .frame{max-width:360px}
- .title{margin-bottom:38px}.copy p{font-size:16px}
-}
-@media(max-width:480px){nav a{padding:7px 9px;font-size:9px}.member button{grid-template-columns:105px 1fr}.member img{width:105px;height:105px}.member-head{padding:20px 17px}.member-head h3{font-size:17px}}
+:root{--ivory:#f6f1e7;--paper:#fbf8f1;--green:#0d4b3b;--green2:#123e34;--gold:#b58a3b;--ink:#18251f;--muted:#65716a;--line:rgba(13,75,59,.15);--white:#fffdf8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ivory);color:var(--ink);font-family:Tajawal,Arial,sans-serif;line-height:1.95}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{font:inherit}
+.nav{position:fixed;top:16px;right:50%;transform:translateX(50%);z-index:50;width:min(1180px,calc(100% - 32px));padding:12px 18px;border:1px solid rgba(255,255,255,.22);border-radius:999px;background:rgba(13,62,52,.88);backdrop-filter:blur(18px);box-shadow:0 15px 45px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:space-between;color:#fff}.brand{font-family:'Noto Kufi Arabic';font-weight:800;font-size:14px;white-space:nowrap}.brand span{color:#e6c777}.links{display:flex;gap:20px;font-size:13px;color:#f3efe5}.links a{opacity:.86;transition:.25s}.links a:hover{opacity:1;color:#e8c979}.menu{display:none}
+.hero{min-height:100vh;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:120px 7% 75px;background:var(--green);isolation:isolate}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,31,25,.15),rgba(5,31,25,.5)),url('assets/saudi-heritage.jpeg') center/cover;z-index:-2;transform:scale(1.02)}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(5,31,25,.9) 0%,rgba(5,31,25,.2) 55%,rgba(5,31,25,.1) 100%);z-index:-1}.hero-inner{width:min(1250px,100%);margin:auto;color:white}.hero-copy{max-width:760px}.hero h1{font-family:'Noto Kufi Arabic';font-size:clamp(48px,8vw,112px);line-height:1.12;margin:14px 0 18px;letter-spacing:-3px}.hero .lead{font-size:clamp(18px,2vw,24px);max-width:650px;color:#f4efe5;margin:0 0 28px}.hero-meta{display:flex;gap:12px;flex-wrap:wrap}.pill{padding:9px 15px;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.1);border-radius:999px;font-size:13px;backdrop-filter:blur(8px)}.scroll{margin-top:55px;display:inline-flex;align-items:center;gap:9px;color:#ead28f;font-size:13px}.scroll i{width:34px;height:1px;background:#ead28f;display:block}
+.section{width:min(1220px,calc(100% - 40px));margin:auto;padding:115px 0}.section-head{max-width:850px;margin-bottom:55px}.section-head h2{font-family:'Noto Kufi Arabic';font-size:clamp(34px,5vw,64px);line-height:1.35;margin:0 0 15px;letter-spacing:-1px}.section-head p{font-size:19px;color:var(--muted);margin:0}.chapter{position:relative}.chapter:before{content:"";position:absolute;right:-60px;top:20px;width:120px;height:120px;border-radius:50%;background:rgba(181,138,59,.09);z-index:-1}
+.aziz{display:grid;grid-template-columns:.9fr 1.1fr;gap:65px;align-items:center}.portrait{position:relative}.portrait img{width:100%;max-height:700px;object-fit:cover;border-radius:28px;box-shadow:0 30px 70px rgba(23,37,31,.16)}.portrait .stamp{position:absolute;left:-22px;bottom:28px;background:var(--green);color:#fff;padding:14px 18px;border-radius:16px;box-shadow:0 15px 30px rgba(0,0,0,.15);font-weight:700}.copy h3{font-family:'Noto Kufi Arabic';font-size:32px;margin:0 0 22px;color:var(--green)}.copy p{font-size:18px;color:#4f5c55;margin:0 0 18px}.quote{font-family:'Noto Kufi Arabic';font-size:28px;line-height:1.8;color:var(--green);border-right:4px solid var(--gold);padding-right:22px;margin-top:30px}
+.goals{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.goal{background:rgba(255,253,248,.75);border:1px solid var(--line);padding:32px;border-radius:24px;min-height:190px;transition:.3s}.goal:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(13,75,59,.08)}.goal h3{font-family:'Noto Kufi Arabic';font-size:22px;color:var(--green);margin:0 0 10px}.goal p{margin:0;color:#5c6862;font-size:16px}
+.achieved{background:var(--paper);position:relative;overflow:hidden}.achieved:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 10% 20%,rgba(181,138,59,.08),transparent 25%),radial-gradient(circle at 90% 75%,rgba(13,75,59,.07),transparent 28%);pointer-events:none}.story{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center;margin:0 0 110px;position:relative}.story:nth-of-type(even){grid-template-columns:.95fr 1.05fr}.story:nth-of-type(even) .story-media{order:2}.story-text h3{font-family:'Noto Kufi Arabic';font-size:32px;color:var(--green);margin:0 0 16px}.story-text p{font-size:18px;color:#536059;margin:0 0 16px}.story-media{position:relative}.story-media img,.story-media video{width:100%;border-radius:28px;object-fit:cover;box-shadow:0 25px 60px rgba(0,0,0,.13)}.story-media.tall img{aspect-ratio:4/5}.story-media.wide img{aspect-ratio:16/10}.story-media .small{position:absolute;width:42%;right:-35px;bottom:-45px;border:10px solid var(--paper);box-shadow:0 20px 40px rgba(0,0,0,.15)}.bigquote{margin:25px 0 110px;padding:45px 6%;text-align:center;font-family:'Noto Kufi Arabic';font-size:clamp(28px,4vw,54px);line-height:1.75;color:white;background:linear-gradient(135deg,var(--green),#1c624f);border-radius:30px;box-shadow:0 25px 55px rgba(13,75,59,.18)}.bigquote span{color:#e5c66f}
+.collage{display:grid;grid-template-columns:1.25fr .75fr .9fr;grid-auto-rows:230px;gap:14px;margin-top:45px}.collage figure{margin:0;overflow:hidden;border-radius:22px;position:relative;background:#ddd}.collage figure:first-child{grid-row:span 2}.collage figure:nth-child(4){grid-column:2/4}.collage img{width:100%;height:100%;object-fit:cover;transition:.5s}.collage figure:hover img{transform:scale(1.04)}.caption{position:absolute;right:14px;bottom:14px;background:rgba(13,62,52,.86);color:white;padding:7px 11px;border-radius:10px;font-size:12px}
+.number{display:flex;align-items:end;gap:25px;margin-bottom:30px}.number strong{font-family:'Noto Kufi Arabic';font-size:clamp(90px,15vw,180px);line-height:.8;color:var(--green)}.number div{font-size:20px;color:#64716a;padding-bottom:8px}.number div b{color:var(--green);font-size:25px}
+.committee{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.member{background:var(--white);border:1px solid var(--line);border-radius:24px;overflow:hidden;cursor:pointer;transition:.3s}.member:hover{transform:translateY(-5px)}.member img{width:100%;aspect-ratio:4/5;object-fit:cover}.member-body{padding:18px}.member-body h3{font-family:'Noto Kufi Arabic';font-size:20px;margin:0;color:var(--green)}.member-body small{color:#78827d}.member-detail{max-height:0;overflow:hidden;transition:max-height .5s ease}.member.open .member-detail{max-height:420px}.member-detail p{padding:0 18px 20px;margin:10px 0 0;color:#5c6862;font-size:15px}.member.open{box-shadow:0 20px 45px rgba(13,75,59,.1)}
+.teams-band{background:var(--green);color:white;border-radius:34px;padding:70px 6%;overflow:hidden;position:relative}.teams-band:after{content:"64";position:absolute;left:-30px;bottom:-70px;font-family:'Noto Kufi Arabic';font-size:260px;color:rgba(255,255,255,.05);font-weight:800}.team-strip{display:flex;gap:12px;overflow:hidden;margin-top:35px}.team-strip img{width:260px;height:160px;object-fit:cover;border-radius:18px;flex:0 0 auto}.teams-band h2{font-family:'Noto Kufi Arabic';font-size:50px;margin:0}.teams-band p{max-width:720px;color:#dbe6df;font-size:18px}
+.eleanor{background:#f1dfb3;border-radius:36px;overflow:hidden;position:relative}.eleanor-grid{display:grid;grid-template-columns:1fr 1.1fr}.eleanor-copy{padding:75px 8%}.eleanor-copy h2{font-family:'Noto Kufi Arabic';font-size:58px;color:#654b18;margin:0 0 8px}.goldline{width:70px;height:3px;background:#a97d2c;margin:20px 0 28px}.eleanor-copy p{font-size:19px;color:#6c5b35}.eleanor-media img{width:100%;height:100%;object-fit:cover;min-height:520px}.video-wrap{padding:0 8% 60px}.video-wrap video{width:100%;border-radius:25px;max-height:600px;object-fit:cover;background:#c7a34e}.thanks{padding:60px 8%;display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}.thanks img{border-radius:24px;box-shadow:0 20px 50px rgba(84,61,17,.16)}.thanks p{font-size:19px;color:#68562f}.thanks strong{font-family:'Noto Kufi Arabic';font-size:30px;color:#604818}
+.end{min-height:78vh;background:var(--green);color:white;display:grid;place-items:center;text-align:center;padding:90px 7%;position:relative;overflow:hidden}.end:before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(6,38,31,.75),rgba(6,38,31,.88)),url('assets/stadium-field.jpeg') center/cover;opacity:.75}.end-inner{position:relative;z-index:1}.end h2{font-family:'Noto Kufi Arabic';font-size:clamp(35px,6vw,75px);line-height:1.55;margin:0 0 25px}.end p{font-size:20px;color:#e5e0d4}.dedication{margin-top:60px;color:#e6c777;font-family:'Noto Kufi Arabic';font-size:18px}
+.reveal{opacity:0;transform:translateY(25px);transition:.7s ease}.reveal.visible{opacity:1;transform:none}
+@media(max-width:900px){.links{display:none}.menu{display:block;font-size:13px}.aziz,.story,.story:nth-of-type(even),.eleanor-grid,.thanks{grid-template-columns:1fr}.story:nth-of-type(even) .story-media{order:0}.goals{grid-template-columns:1fr}.committee{grid-template-columns:repeat(2,1fr)}.collage{grid-template-columns:1fr 1fr;grid-auto-rows:190px}.collage figure:first-child{grid-row:span 2}.collage figure:nth-child(4){grid-column:1/3}.eleanor-copy{padding:50px 7%}.video-wrap{padding:0 7% 45px}.thanks{padding:45px 7%}}
+@media(max-width:560px){.nav{top:9px;width:calc(100% - 18px)}.brand{font-size:11px}.section{width:min(100% - 28px,1220px);padding:80px 0}.hero{padding:110px 6% 55px}.hero h1{font-size:48px;letter-spacing:-2px}.hero .lead{font-size:17px}.committee{grid-template-columns:1fr}.collage{grid-template-columns:1fr;grid-auto-rows:240px}.collage figure:first-child,.collage figure:nth-child(4){grid-row:auto;grid-column:auto}.story-media .small{position:relative;width:55%;right:auto;bottom:auto;margin:-40px 20px 0 auto;border-width:7px}.teams-band h2{font-size:38px}.teams-band{padding:50px 7%}.number strong{font-size:100px}.quote{font-size:22px}}
 </style>
 </head>
 <body>
-<nav>
-<a href="#aziz">عزيز قوم</a><a href="#goals">الأهداف</a><a href="#achieved">ما تحقق</a><a href="#committee">اللجنة</a><a href="#teams">المنتخبات</a><a href="#eleanor">إليانور</a>
-</nav>
+<nav class="nav"><a class="brand" href="#top">كأس <span>عزيز قوم</span> 2026</a><div class="links"><a href="#aziz">عزيز قوم</a><a href="#goals">الأهداف</a><a href="#achieved">أهداف تحققت</a><a href="#committee">اللجنة</a><a href="#teams">المنتخبات</a><a href="#eleanor">إليانور</a></div><span class="menu">محاكاة 2034</span></nav>
+<header class="hero" id="top"><div class="hero-inner"><div class="hero-copy reveal"><div class="hero-meta"><span class="pill">محاكاة كأس العالم 2034</span><span class="pill">64 منتخبًا</span><span class="pill">320 مشاركًا</span></div><h1>كأس عزيز قوم</h1><p class="lead">فكرة بدأت بتغريدة… ثم تحولت إلى رحلة عاشت أجواء المونديال، وجابت العالم، وعادت إلى المملكة لتكتشفها من جديد.</p><a class="scroll" href="#aziz"><i></i> ابدأ الرحلة</a></div></div></header>
 
-<header class="hero">
-<div class="hero-inner">
-<div class="eyebrow">ملف إنجاز رقمي</div>
-<h1>كأس عزيز قوم <span>2026</span></h1>
-<div class="rule"></div>
-<p>من فكرة بدأت بتغريدة… إلى محاكاة عاشها المشاركون، واكتشفوا من خلالها العالم والمملكة.</p>
-</div>
-<div class="scroll">اكتشف الحكاية<i></i></div>
-</header>
+<section class="section chapter" id="aziz"><div class="aziz"><div class="portrait reveal"><img src="assets/aziz-cover.jpeg" alt="عزيز قوم"><div class="stamp">صاحب فكرة المحاكاة</div></div><div class="copy reveal"><h3>عزيز قوم<br>صاحب فكرة محاكاة كأس العالم 2034</h3><p>بدأت فكرة المحاكاة مع عزيز قوم، الذي أراد أن يصنع تجربة تعيش أجواء المونديال على منصة إكس، وتتجاوز متابعة المباريات والنتائج إلى التفاعل، والمعرفة، وصناعة المحتوى.</p><p>ومن فكرة بدأت بتغريدة، تحولت المحاكاة إلى تجربة متكاملة شارك فيها 64 منتخبًا و320 مشاركًا، وامتدت لتجمع بين المنافسة والإبداع والاكتشاف.</p><p>وكانت الفكرة منذ بدايتها تحمل هدفًا أبعد من كرة القدم؛ أن تكون المحاكاة مساحة نتعرف من خلالها على العالم، ثم نعود إلى المملكة لنكتشفها، ونقترب أكثر من رؤيتها واستعداداتها لمونديال 2034.</p><div class="quote">أما تفاصيل الرحلة، وما بذله صاحب الفكرة واللجنة في تحويلها من فكرة إلى واقع، فله حكاية أخرى.</div></div></div></section>
 
-<section id="aziz">
-<div class="title"><h2>عزيز قوم</h2><div class="num">صاحب الفكرة</div></div>
-<div class="aziz">
-<div class="frame"><img src="aziz.png" alt="عزيز قوم"></div>
-<div class="aziz-copy">
-<h3>صاحب فكرة محاكاة كأس العالم 2034</h3>
-<p>بدأت فكرة المحاكاة مع عزيز قوم، الذي أراد أن يصنع تجربة تعيش أجواء المونديال على منصة إكس، وتتجاوز متابعة المباريات والنتائج إلى التفاعل، والمعرفة، وصناعة المحتوى.</p>
-<p>ومن فكرة بدأت بتغريدة، تحولت المحاكاة إلى تجربة متكاملة شارك فيها 64 منتخبًا و320 مشاركًا، وامتدت لتجمع بين المنافسة والإبداع والاكتشاف.</p>
-<p>وكانت الفكرة منذ بدايتها تحمل هدفًا أبعد من كرة القدم؛ أن تكون المحاكاة مساحة نتعرف من خلالها على العالم، ثم نعود إلى المملكة لنكتشفها، ونقترب أكثر من رؤيتها واستعداداتها لمونديال 2034.</p>
-<p>أما تفاصيل الرحلة، وما بذله صاحب الفكرة واللجنة في تحويلها من فكرة إلى واقع، فله حكاية أخرى.</p>
-<div class="signature">عزيز قوم — الفكرة التي بدأت منها الرحلة</div>
-</div>
-</div>
+<section class="section" id="goals"><div class="section-head reveal"><h2>أهداف المحاكاة</h2><p>منذ البداية، لم تكن المنافسة وحدها هي المقصودة؛ كانت المحاكاة مساحة للتجربة والمعرفة والاكتشاف والإبداع.</p></div><div class="goals"><article class="goal reveal"><h3>عيش أجواء المونديال</h3><p>محاكاة تجربة كأس العالم بكل ما تحمله من منافسة وتفاعل وحضور جماهيري.</p></article><article class="goal reveal"><h3>التعرّف على العالم</h3><p>منح كل منتخب مساحة للتعريف ببلده وثقافته وهويته، في جولة سريعة حول العالم.</p></article><article class="goal reveal"><h3>اكتشاف المملكة</h3><p>التعرّف على مناطق المملكة ومدنها وتراثها وثقافتها ومعالمها وتنوعها.</p></article><article class="goal reveal"><h3>تعلّم الذكاء الاصطناعي</h3><p>تعليم استخدام الذكاء الاصطناعي وتوظيفه في مختلف مجالات الحياة والعمل وصناعة المحتوى.</p></article><article class="goal reveal"><h3>ربط الحاضر بالمستقبل</h3><p>التعرّف على رؤية السعودية 2030، ومشاريعها المستقبلية، والاستعدادات لمونديال 2034.</p></article><article class="goal reveal"><h3>جعل المعرفة جزءًا من المنافسة</h3><p>تحويل البحث والتعلّم واكتساب المعرفة إلى جزء من تجربة المنافسة.</p></article><article class="goal reveal"><h3>صنع مساحة للإبداع</h3><p>فتح المجال للمواهب لصناعة المحتوى والتصميم والفيديو والإعلام والحوار.</p></article></div></section>
+
+<section class="section achieved" id="achieved"><div class="section-head reveal"><h2>أهداف تحققت</h2><p>ما حدث داخل المحاكاة كان أكبر من قائمة أهداف. كانت رحلة تتسع كلما بحث المشاركون أكثر، ثم تعود بهم دائمًا إلى المملكة، ورؤية 2030، والاستعداد للمستقبل.</p></div>
+<div class="story reveal"><div class="story-text"><h3>اكتشفنا السعودية من جديد</h3><p>المحاكاة بدأت كرحلة حول العالم، لكن كلما تقدمت الرحلة، كانت تعود بنا إلى المملكة.</p><p>بحث المشاركون عن السعودية من شمالها إلى جنوبها، ومن شرقها إلى غربها؛ عن مناطقها ومدنها، وعن اختلاف طبيعتها وتنوعها الثقافي والجغرافي.</p><p>لم يكن الاكتشاف مقتصرًا على الأماكن المعروفة، بل امتد إلى التاريخ والحضارات والتراث، والأكلات والملابس والفنون الشعبية والعادات والتقاليد، والمعالم السياحية والطبيعة.</p><p>ومع كل بحث، كانت تظهر صورة أكثر اتساعًا للمملكة؛ بلد تتنوع فيه التجارب من الصحراء والجبال، إلى السواحل والجزر، ومن المدن الحديثة إلى المواقع التاريخية.</p><p>وهنا تحولت المحاكاة إلى دعوة حقيقية للتعرّف على المملكة واكتشافها والسفر داخلها.</p></div><div class="story-media tall"><img src="assets/team-mangrove.jpeg" alt="اكتشاف الطبيعة في السعودية"><img class="small" src="assets/saudi-food.jpeg" alt="اكتشاف الثقافة والطعام"></div></div>
+<div class="story reveal"><div class="story-text"><h3>من جولة حول العالم… إلى العودة للمملكة</h3><p>في البداية، كان لكل منتخب مساحة يتحدث فيها عن بلده؛ ثقافته، تاريخه، مدنه، عاداته، ومعالمه.</p><p>فأصبحت المحاكاة أشبه بجولة سريعة حول العالم؛ كل منتخب يأخذنا إلى مكان جديد، وكل محتوى يعرّفنا بجانب من بلد مختلف.</p><p>لكن بعد أن تعرّفنا على العالم، جاءت العودة إلى المملكة. هنا بدأت مرحلة مختلفة؛ لم تعد المملكة مجرد الدولة التي تستضيف المحاكاة، بل أصبحت المكان الذي تعود إليه جميع الرحلات.</p><p>كل منتخب اختار مدينة سعودية لمعسكره، وبدأ يبحث عنها ويقدمها ويكتشف تفاصيلها.</p></div><div class="story-media wide"><img src="assets/kuwait-team.jpeg" alt="منتخب الكويت في المحاكاة"><img class="small" src="assets/burkina.jpeg" alt="منتخب بوركينا فاسو"></div></div>
+<div class="bigquote reveal">العالم كان محطة… <span>والمملكة كانت وجهة.</span></div>
+<div class="story reveal"><div class="story-text"><h3>رأينا حجم ما يحدث في السعودية</h3><p>وهنا بدأت المحاكاة تتجاوز فكرة السياحة والاكتشاف.</p><p>كلما بحث المشاركون عن المملكة، بدأوا في الوصول إلى جهود ومشاريع وأعمال مرتبطة برؤية السعودية 2030؛ مشاريع ضخمة، تحول رقمي، بنية تحتية، مدن ووجهات جديدة، تقنيات وخدمات، واستعدادات تمتد إلى قطاعات كثيرة.</p><p>واللافت أن كثيرًا من هذه التفاصيل لم تكن مما يراه الإنسان يوميًا بالضرورة.</p><p class="quote">«كيف كل هذا يحدث ونحن لا نراه؟»</p><p>المحاكاة جعلت المشاركين يبحثون بأنفسهم، وكل بحث كان يقود إلى معلومة جديدة، ومشروع جديد، وجهد آخر لم يكن ظاهرًا لهم من قبل.</p></div><div class="story-media wide"><img src="assets/us-saudi.jpeg" alt="السعودية في قلب المشهد العالمي"><img class="small" src="assets/stadium-field.jpeg" alt="ملعب ومحاكاة مونديالية"></div></div>
+<div class="story reveal"><div class="story-text"><h3>اكتشفنا ما وراء المشهد</h3><p>ربما كان هذا من أكثر الجوانب التي جعلت التجربة مختلفة.</p><p>فالمحاكاة لم تكتفِ بما يظهر أمام الناس، بل دفعت المشاركين للبحث عن ما يحدث خلف المشهد.</p><p>الخدمات التي نستخدمها بسهولة اليوم، كيف وصلت إلى هذا المستوى؟ ما الذي يحدث خلف الأنظمة؟ كم من التخطيط والعمل والتقنية والكوادر والبنية التحتية يقف خلف خدمة تبدو للمستخدم بسيطة؟</p><p>كلما دخل المشاركون في التفاصيل، اكتشفوا أن الصورة التي نراها أمامنا هي في الحقيقة النتيجة النهائية لسلسلة طويلة من العمل.</p><p class="quote">ما نراه أمامنا… هو النتيجة النهائية لسلسلة طويلة من العمل.</p></div><div class="story-media wide"><video controls muted playsinline preload="metadata"><source src="assets/behind-video.mov" type="video/quicktime"></video><img class="small" src="assets/work-table.jpeg" alt="كواليس تجهيز المحاكاة"></div></div>
+<div class="story reveal"><div class="story-text"><h3>عشنا المستقبل قبل أن يصل</h3><p>لم تكن المحاكاة تكتفي بالتعرف على المشاريع الموجودة اليوم.</p><p>في كثير من المرات، وجد المشاركون أنفسهم أمام خطط ومشاريع ومستهدفات مستقبلية مرتبطة برؤية 2030 والاستعداد لمونديال 2034.</p><p>فبدأوا يتعاملون مع المستقبل وكأنه جزء من الرحلة الحالية؛ يبحثون عن المدن، والمشاريع، والبنية التحتية، والتقنيات، والخدمات، والاستعدادات، ويحاولون تخيل كيف ستبدو المملكة عندما تكتمل هذه الصورة.</p><p>وهنا تحققت واحدة من أهم أفكار المحاكاة: أن نقرأ المستقبل من خلال ما يُبنى اليوم.</p></div><div class="story-media wide"><img src="assets/bracket.jpeg" alt="أدوار المحاكاة"><img class="small" src="assets/schedule.jpeg" alt="جدول المباريات"></div></div>
+<div class="story reveal"><div class="story-text"><h3>كلما اتسعت الرحلة… أعادها عزيز إلى الهدف</h3><p>ومع اتساع دائرة البحث، كان من السهل أن تبتعد الرحلة عن فكرتها الأساسية.</p><p>لكن كلما أخذتنا المحاكاة إلى موضوع جديد، كان عزيز قوم يعيد توجيه المسار نحو المحاور الأساسية: رؤية السعودية 2030، مونديال 2034، الاستعدادات خلف المشهد، والصلّة بين كل ذلك ورؤية المملكة.</p><p>فلم تكن المعرفة غاية منفصلة عن المحاكاة، بل كانت جزءًا من الطريق.</p></div><div class="story-media tall"><img src="assets/aziz-cover.jpeg" alt="عزيز قوم"></div></div>
+<div class="story reveal"><div class="story-text"><h3>تحولت المنافسة إلى وسيلة للتعلّم</h3><p>في المحاكاة، لم تكن المعرفة درسًا منفصلًا. لم يكن هناك فصل بين المنافسة والتعلّم.</p><p>المنتخب الذي يريد أن يقدم محتوى أفضل كان عليه أن يبحث أكثر، والذي يريد أن يتحدث عن مدينة أو مشروع كان عليه أن يعرف تفاصيله، والذي يريد أن يصنع مادة مختلفة كان عليه أن يكتشف شيئًا جديدًا.</p><p>وبذلك أصبح البحث جزءًا من اللعبة، وأصبحت المعلومة التي يجدها المشاركون بأنفسهم جزءًا من تجربتهم.</p></div><div class="story-media wide"><img src="assets/work-table.jpeg" alt="كواليس العمل والتجهيز"><img class="small" src="assets/tunisia-roster.jpeg" alt="تجهيزات المنتخبات"></div></div>
+<div class="story reveal"><div class="story-text"><h3>اكتشفنا المواهب التي كانت خلف الشاشات</h3><p>المحاكاة لم تكن مساحة للمنافسة فقط، بل فتحت مساحة كبيرة للإبداع.</p><p>ظهر أشخاص في التصميم، وصناعة الفيديو، والكتابة، والتغطية الإعلامية، وإدارة الحسابات، والتقديم، والحوار، وصناعة الأفكار.</p><p>وأصبح لكل منتخب تقريبًا حضوره الإعلامي الخاص، وكأن كل منتخب يملك غرفة أخبار صغيرة تعمل طوال الرحلة.</p></div><div class="story-media wide"><img src="assets/newspaper.jpeg" alt="تغطية صحفية للمحاكاة"><img class="small" src="assets/usa-team.jpeg" alt="إبداع المنتخبات"></div></div>
 </section>
 
-<section id="goals">
-<div class="title"><h2>أهداف المحاكاة</h2><div class="num">ما أردنا أن نصنعه</div></div>
-<div class="goals">
-<article class="goal"><h3>عيش أجواء المونديال</h3><p>محاكاة تجربة كأس العالم بكل ما تحمله من منافسة وتفاعل وحضور جماهيري.</p></article>
-<article class="goal"><h3>التعرّف على العالم</h3><p>منح كل منتخب مساحة للتعريف ببلده وثقافته وهويته، في جولة سريعة حول العالم.</p></article>
-<article class="goal"><h3>اكتشاف المملكة</h3><p>التعرّف على مناطق المملكة ومدنها وتراثها وثقافتها ومعالمها وتنوعها.</p></article>
-<article class="goal"><h3>تعلّم الذكاء الاصطناعي</h3><p>تعليم استخدام الذكاء الاصطناعي وتوظيفه في مختلف مجالات الحياة والعمل وصناعة المحتوى.</p></article>
-<article class="goal"><h3>ربط الحاضر بالمستقبل</h3><p>التعرّف على رؤية السعودية 2030، ومشاريعها المستقبلية، والاستعدادات لمونديال 2034.</p></article>
-<article class="goal"><h3>جعل المعرفة جزءًا من المنافسة</h3><p>تحويل البحث والتعلّم واكتساب المعرفة إلى جزء من تجربة المنافسة.</p></article>
-<article class="goal"><h3>صنع مساحة للإبداع</h3><p>فتح المجال للمواهب لصناعة المحتوى والتصميم والفيديو والإعلام والحوار.</p></article>
-</div>
-</section>
+<section class="section" id="committee"><div class="section-head reveal"><h2>اللجنة التنظيمية</h2><p>الفكرة بدأت بشخص… لكنها لم تكن لتستمر بهذا الشكل دون فريق حمل تفاصيلها يومًا بعد يوم.</p></div><div class="committee"><article class="member reveal" onclick="this.classList.toggle('open')"><img src="assets/hamada.jpeg" alt="حمادة"><div class="member-body"><h3>حمادة</h3><small>التنسيق والمتابعة</small></div><div class="member-detail"><p>كان حمادة حلقة الوصل المباشرة بين اللجنة والفرق والمشاركين؛ يتابع استفساراتهم وملاحظاتهم، وينقلها إلى رئيس اللجنة، ويحرص على بقاء التواصل منظمًا وواضحًا طوال الرحلة.<br><br>تولى التنسيق بين الفرق وتحديد مواعيد المباريات، وإعداد جدول المنافسات وتنظيمه وتحديثه، إلى جانب مسؤولية المسابقات ومراحلها ومتابعة آليتها. كما تابع التزام الفرق بالمواعيد والتعليمات، ونسّق باستمرار مع بقية أعضاء اللجنة لضمان سير المنافسات بالصورة المعتمدة.</p></div></article><article class="member reveal" onclick="this.classList.toggle('open')"><img src="assets/aryam.jpeg" alt="الريم"><div class="member-body"><h3>الريم</h3><small>الإعداد والمتابعة الميدانية</small></div><div class="member-detail"><p>في قلب الاستعداد لكل مباراة، كانت الريم حاضرة لمتابعة التفاصيل التي تسبق المنافسة وترافقها؛ من إعداد وتجهيز كشوفات أسماء اللاعبين قبل بداية المباراة، إلى التأكد من جاهزية الفرق واللاعبين.<br><br>ومع انطلاق المنافسة، تولّت متابعة سير المباراة ومراقبته، ورصد أي ملاحظات أو مخالفات قد تظهر أثناء المنافسة، ورفعها إلى رئيس اللجنة عند الحاجة.</p></div></article><article class="member reveal" onclick="this.classList.toggle('open')"><img src="assets/shomoukh.jpeg" alt="الشموخ"><div class="member-body"><h3>الشموخ الشمري</h3><small>الإعداد والمتابعة الميدانية</small></div><div class="member-detail"><p>لم تقتصر المتابعة على ما يحدث أثناء المباراة، بل بدأت من لحظات الاستعداد لها؛ حيث تولّت الشموخ تجهيز كشوفات أسماء اللاعبين والتأكد من جاهزية الفرق واللاعبين قبل انطلاق المنافسة.<br><br>ومع بداية المباراة، واصلت متابعة سيرها ومراقبتها، مع رصد أي ملاحظات أو مخالفات تظهر خلال المنافسة، ورفع ما يستدعي المتابعة إلى رئيس اللجنة عند الحاجة.</p></div></article><article class="member reveal" onclick="this.classList.toggle('open')"><img src="assets/om-ward.jpeg" alt="أم ورد"><div class="member-body"><h3>أم ورد</h3><small>التوثيق والإعلام والإحصائيات</small></div><div class="member-detail"><p>خلف كل مباراة كانت هناك مهمة أخرى لا تقل أهمية عن المنافسة نفسها: أن تُوثّق، وتُرتّب، وتصل تفاصيلها إلى الجمهور بصورة تليق بالبطولة.<br><br>تولت أم ورد إعداد تقارير المباريات ونتائجها، وتوثيق إحصائيات وأحداث كل مباراة، ثم تحويل هذه التفاصيل إلى محتوى مصمم للنتائج والإحصائيات، ونشر التقارير والنتائج عبر حساب البطولة.<br><br>ولم يتوقف دورها عند التوثيق والنشر؛ بل تولّت كذلك الإلقاء والتقديم في ختام المباريات والبطولات.</p></div></article></div></section>
 
-<section id="achieved" class="achieved">
-<div class="title"><h2>أهداف تحققت</h2><div class="num">ما حدث على أرض التجربة</div></div>
-<div class="copy">
-<p>لم تبقَ الأهداف مجرد عناوين؛ فقد تحولت خلال الرحلة إلى تجربة عاشها المشاركون بأنفسهم. بدأت المنتخبات بالبحث عن المملكة، والتعريف بمناطقها ومدنها ومعالمها وثقافتها، وكأن المحاكاة تحولت في جانب منها إلى دعوة لاكتشاف السعودية وجمالها.</p>
-<p>وفي الوقت نفسه، اتسعت دائرة المعرفة لتصل إلى ما وراء المشهد؛ إلى ما تقوم به المملكة في التنمية، وما تبنيه من مشاريع وخدمات، وما توظفه من تقنيات في طريقها نحو المستقبل ورؤية السعودية 2030.</p>
-<p>بدأت الرحلة من العالم؛ كل منتخب يعرّف ببلده وثقافته وهويته، فكانت أشبه بجولة سريعة حول العالم. ثم عادت المنتخبات إلى معسكراتها في المملكة، لتبدأ رحلة أخرى مختلفة: رحلة اكتشاف السعودية.</p>
-<p>ومع اتساع المعرفة وتنوع الموضوعات، كان عزيز قوم يعيد توجيه الرحلة كلما ابتعدت عن مسارها الأساسي، رابطًا ما يُكتشف برؤية السعودية 2030، ومونديال 2034، والاستعدادات التي تجري خلف المشهد، والعلاقة بين هذه الجهود ومستهدفات الرؤية.</p>
-<p>أما ما وراء المشهد، فكان من أكثر ما ترك أثره؛ إذ اكتشف المشاركون حجم الخدمات والأعمال التي تُنجز خلف الكواليس، والجهد الذي يتطلبه الوصول بها إلى هذا المستوى من الدقة وسهولة الاستخدام.</p>
-<p>لم نكتفِ بالنظر إلى المستقبل من بعيد، بل عشنا الخطط والتفاصيل وكأننا نراها على أرض الواقع؛ من دقة التخطيط إلى مراحل التنفيذ، ومن الصورة النهائية التي يراها الناس إلى العمل الكبير الذي يقف خلفها.</p>
-</div>
-</section>
+<section class="section" id="teams"><div class="teams-band reveal"><div class="number"><strong>64</strong><div><b>منتخبًا</b><br>من مختلف أنحاء العالم</div></div><p>64 منتخبًا من مختلف أنحاء العالم، اجتمعوا في محاكاة واحدة، ولكل منتخب هويته وحضوره وقصته. بدأت الرحلة بالتعريف بالبلدان وثقافاتها، ثم انتقلت المنتخبات إلى المملكة لتعيش تجربة الاستضافة وتكتشف مدنها وتفاصيلها.</p><p><strong>64 منتخبًا… رحلة واحدة، ووجهة واحدة: المملكة.</strong></p><div class="team-strip"><img src="assets/kuwait-team.jpeg" alt="الكويت"><img src="assets/burkina.jpeg" alt="بوركينا فاسو"><img src="assets/russia.jpeg" alt="روسيا"><img src="assets/belgium.jpeg" alt="بلجيكا"><img src="assets/tunisia-roster.jpeg" alt="تونس"><img src="assets/usa-team.jpeg" alt="أمريكا"></div></div></section>
 
-<section id="committee">
-<div class="title"><h2>اللجنة التنظيمية</h2><div class="num">من حملوا التفاصيل</div></div>
-<div class="committee">
-<article class="member"><button type="button" aria-expanded="false"><img src="hamada.jpeg" alt="حمادة"><div class="member-head"><h3>حمادة</h3><span>التنسيق وإدارة المنافسات</span></div></button><div class="body"><div class="body-inner">
-كان حمادة حلقة الوصل المباشرة بين اللجنة والفرق والمشاركين؛ يتابع استفساراتهم وملاحظاتهم، وينقلها إلى رئيس اللجنة، ويحرص على بقاء التواصل منظمًا وواضحًا طوال الرحلة.<br><br>
-تولى التنسيق بين الفرق وتحديد مواعيد المباريات، وإعداد جدول المنافسات وتنظيمه وتحديثه، إلى جانب مسؤولية المسابقات ومراحلها ومتابعة آليتها. كما تابع التزام الفرق بالمواعيد والتعليمات، ونسّق باستمرار مع بقية أعضاء اللجنة لضمان سير المنافسات بالصورة المعتمدة.<br><br>
-دورٌ يعتمد على المتابعة المستمرة، ودقة التنظيم، وسرعة التعامل مع تفاصيل تتغير مع سير المنافسات، حتى تبقى الرحلة منضبطة من مباراة إلى أخرى.
-</div></div></article>
+<section class="section" id="eleanor"><div class="eleanor reveal"><div class="eleanor-grid"><div class="eleanor-copy"><h2>إليانور</h2><div class="goldline"></div><p>الراعي الرسمي</p><p>لا يكتمل المشهد إلا بمن يدرك قيمة اللحظة..</p><p>لم تكن إليانور مجرد راعٍ رسمي، بل كانت الروح التي أضاءت زوايا المدرجات، واللمسة التي حوّلت هتاف الجماهير إلى ذكريات محفورة في القلب 🏆✨</p><p>هداياك لم تكن مجرد تفاصيل عابرة، بل رسائل تقدير وصلت لأرواح المشجعين قبل أيديهم، لتثبتي أن الشراكة الحقيقية هي التي تزرع الفرح وتخلّد اللحظة 🎁💚</p><p><strong>شكرًا إليانور، لأنك اخترتِ أن تكوني شريكة النبض، وصانعة البهجة في البطولة الاستثنائية.</strong></p></div><div class="eleanor-media"><img src="assets/eleanor-book.jpeg" alt="ملف محاكاة المونديال والراعي الرسمي إليانور"></div></div><div class="video-wrap"><video controls playsinline preload="metadata"><source src="assets/eleanor-video.mov" type="video/quicktime"></video></div><div class="thanks"><img src="assets/thanks-book.jpeg" alt="صفحة شكر إليانور"><div><strong>شكر وتقدير</strong><p>وجودك أضاف جمالًا لقصتنا، ودعمك كان جزءًا من اللحظات التي صنعت ذاكرة هذه المحاكاة.</p><img src="assets/eleanor-team.jpeg" alt="فريق يحمل هوية إليانور"></div></div></div></section>
 
-<article class="member"><button type="button" aria-expanded="false"><img src="aryam.jpeg" alt="الريم"><div class="member-head"><h3>الريم</h3><span>الإعداد والمتابعة الميدانية</span></div></button><div class="body"><div class="body-inner">
-في قلب الاستعداد لكل مباراة، كانت الريم حاضرة لمتابعة التفاصيل التي تسبق المنافسة وترافقها؛ من إعداد وتجهيز كشوفات أسماء اللاعبين قبل بداية المباراة، إلى التأكد من جاهزية الفرق واللاعبين.<br><br>
-ومع انطلاق المنافسة، تولّت متابعة سير المباراة ومراقبته، ورصد أي ملاحظات أو مخالفات قد تظهر أثناء المنافسة، ورفعها إلى رئيس اللجنة عند الحاجة.<br><br>
-عملٌ ميداني يقوم على الحضور والانتباه للتفاصيل، وعلى أن تكون كل مباراة مستعدة للانطلاق، وأن تسير وفق ما هو معتمد.
-</div></div></article>
-
-<article class="member"><button type="button" aria-expanded="false"><img src="shomoukh.jpeg" alt="الشموخ الشمرية"><div class="member-head"><h3>الشموخ الشمرية</h3><span>الإعداد والمتابعة الميدانية</span></div></button><div class="body"><div class="body-inner">
-لم تقتصر المتابعة على ما يحدث أثناء المباراة، بل بدأت من لحظات الاستعداد لها؛ حيث تولّت الشموخ تجهيز كشوفات أسماء اللاعبين والتأكد من جاهزية الفرق واللاعبين قبل انطلاق المنافسة.<br><br>
-ومع بداية المباراة، واصلت متابعة سيرها ومراقبتها، مع رصد أي ملاحظات أو مخالفات تظهر خلال المنافسة، ورفع ما يستدعي المتابعة إلى رئيس اللجنة عند الحاجة.<br><br>
-مسؤولية تتطلب حضورًا دقيقًا ومتابعة متواصلة، لأن انتظام المنافسة يبدأ من التفاصيل الصغيرة التي تُنجز قبل صافرة البداية وتستمر حتى نهايتها.
-</div></div></article>
-
-<article class="member"><button type="button" aria-expanded="false"><img src="om-ward.jpeg" alt="أم ورد"><div class="member-head"><h3>أم ورد</h3><span>التوثيق والإعلام والإحصائيات</span></div></button><div class="body"><div class="body-inner">
-خلف كل مباراة كانت هناك مهمة أخرى لا تقل أهمية عن المنافسة نفسها: أن تُوثّق، وتُرتّب، وتصل تفاصيلها إلى الجمهور بصورة تليق بالبطولة.<br><br>
-تولت أم ورد إعداد تقارير المباريات ونتائجها، وتوثيق إحصائيات وأحداث كل مباراة، ثم تحويل هذه التفاصيل إلى محتوى مصمم للنتائج والإحصائيات، ونشر التقارير والنتائج عبر حساب البطولة.<br><br>
-ولم يتوقف دورها عند التوثيق والنشر؛ بل تولّت كذلك الإلقاء والتقديم في ختام المباريات والبطولات، لتكون حاضرة في نقل ختام كل مرحلة وإبراز ما شهدته الرحلة من منافسات ونتائج.
-</div></div></article>
-</div>
-</section>
-
-<section id="teams" class="teams">
-<div class="title"><h2>المنتخبات المشاركة</h2><div class="num">رحلة واحدة</div></div>
-<div class="big">64</div>
-<p class="lead">64 منتخبًا من مختلف أنحاء العالم، اجتمعوا في محاكاة واحدة، ولكل منتخب هويته وحضوره وقصته.</p>
-<p class="lead">بدأت الرحلة بالتعريف بالبلدان وثقافاتها، ثم انتقلت المنتخبات إلى المملكة لتعيش تجربة الاستضافة وتكتشف مدنها وتفاصيلها.</p>
-<p class="final">64 منتخبًا… رحلة واحدة، ووجهة واحدة: المملكة.</p>
-</section>
-
-<section id="eleanor">
-<div class="title"><h2>إليانور</h2><div class="num">الراعي الرسمي</div></div>
-<div class="sponsor">
-<div>
-<h3>حضور يكتمل به المشهد</h3>
-<p>حضور إليانور كان جزءًا من الصورة التي اكتملت بها المحاكاة، من الفكرة والمنافسة إلى التنظيم والدعم الذي رافق الرحلة.</p>
-<span class="sponsor-mark">الراعي الرسمي — إليانور</span>
-</div>
-<div class="frame"><img src="eleanor.jpeg" alt="إليانور"></div>
-</div>
-</section>
-
-<section class="end">
-<div><p>لم نحاكي المونديال فقط…<br><span class="gold">بل اكتشفنا السعودية ونحن نحاكيه.</span></p><small>إهداء من ميكرويف</small></div>
-</section>
-<footer>كأس عزيز قوم 2026</footer>
+<section class="end"><div class="end-inner reveal"><h2>لم نحاكي المونديال فقط…<br>بل اكتشفنا السعودية ونحن نحاكيه.</h2><p>رحلة بدأت بفكرة، وامتدت إلى العالم، ثم عادت إلى المملكة.</p><div class="dedication">إهداء من ميكرويف</div></div></section>
+<footer style="padding:25px;text-align:center;background:#073a2f;color:#cbd8d2;font-size:12px">كأس عزيز قوم 2026</footer>
 <script>
-document.querySelectorAll('.member button').forEach(button=>{
- button.addEventListener('click',()=>{
-  const card=button.closest('.member');
-  const open=card.classList.toggle('open');
-  button.setAttribute('aria-expanded',open);
- });
-});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.08});document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
 </script>
-</body>
-</html>
+</body></html>
